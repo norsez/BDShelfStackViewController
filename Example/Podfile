@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'BDShelfStackViewController_Example' do
+  pod 'BDShelfStackViewController', :path => '../'
+
+  target 'BDShelfStackViewController_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
