@@ -1,0 +1,22 @@
+{
+  "name": "BDShelfStackViewController",
+  "version": "0.1.0",
+  "summary": "A short description of BDShelfStackViewController.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/norsez/BDShelfStackViewController",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "norsez": "norsez@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/norsez/BDShelfStackViewController.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "BDShelfStackViewController/Classes/**/*"
+}
