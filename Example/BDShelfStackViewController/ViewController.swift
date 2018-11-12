@@ -12,25 +12,61 @@ import BDShelfStackViewController
 extension BDSSVRow {
     
     static func createDemoRow1() -> BDSSVRow {
-        var r = BDSSVRow(withType: .vertical , itemCount: 30, rowHeight: 150)
+        var r = BDSSVRow(withType: .vertical , itemCount: 30, rowHeight: 250)
         r.sizeAtIndex = {
-            index in return CGSize(width: 50, height: 50)
+            index in return CGSize(width: 300, height: 70)
         }
         r.viewAtIndex = {
             index in
-            let v = UIView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
-            v.backgroundColor = UIColor(hue: CGFloat.random(in: 0..<1), saturation: 1, brightness: 0.5, alpha: 1)
+            let v = UIView(frame: CGRect(x: 0, y: 0, width: 300, height: 70))
+            v.backgroundColor = UIColor.randomColor
+            let l = UILabel.label(withInt: index)
+            v.addSubview(l)
+            l.center = v.center
             return v
         }
         return r
     }
     static func createDemoRow2() -> BDSSVRow {
-        var r = BDSSVRow(withType: .horizontal , itemCount: 35, rowHeight: 200)
-        r.itemSize = CGSize(width: 50, height: 50)
+        var r = BDSSVRow(withType: .horizontal , itemCount: 35, rowHeight: 158)
+        r.itemSize = CGSize(width: 144, height: 144)
         r.viewAtIndex = {
             index in
-            let v = UIView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
-            v.backgroundColor = UIColor(hue: CGFloat.random(in: 0..<1), saturation: 1, brightness: 0.5, alpha: 1)
+            let v = UIView(frame: CGRect(x: 0, y: 0, width: 144, height: 144))
+            v.backgroundColor = UIColor.randomColor
+            let l = UILabel.label(withInt: index)
+            v.addSubview(l)
+            l.center = v.center
+            return v
+        }
+        return r
+    }
+    
+    static func createDemoRow3() -> BDSSVRow {
+        var r = BDSSVRow(withType: .horizontal , itemCount: 50, rowHeight: 42)
+        r.itemSize = CGSize(width: 72, height: 32)
+        r.viewAtIndex = {
+            index in
+            let v = UIView(frame: CGRect(x: 0, y: 0, width: 72, height: 32))
+            v.backgroundColor = UIColor.randomColor
+            let l = UILabel.label(withInt: index)
+            v.addSubview(l)
+            l.center = v.center
+            return v
+        }
+        return r
+    }
+    
+    static func createDemoRow4() -> BDSSVRow {
+        var r = BDSSVRow(withType: .horizontal , itemCount: 6, rowHeight: 64)
+        r.itemSize = CGSize(width: 58, height: 58)
+        r.viewAtIndex = {
+            index in
+            let v = UIView(frame: CGRect(x: 0, y: 0, width: 58, height: 58))
+            v.backgroundColor = UIColor.randomColor
+            let l = UILabel.label(withInt: index)
+            v.addSubview(l)
+            l.center = v.center
             return v
         }
         return r
@@ -41,7 +77,10 @@ class ViewController: UIViewController {
     var demoCtrl: BDShelfStackViewController?
     override func viewDidLoad() {
         super.viewDidLoad()
-        let rows: [BDSSVRow] = [BDSSVRow.createDemoRow1(), BDSSVRow.createDemoRow2()]
+        let rows: [BDSSVRow] = [BDSSVRow.createDemoRow1(),
+                                BDSSVRow.createDemoRow2(),
+                                BDSSVRow.createDemoRow3(),
+                                BDSSVRow.createDemoRow4()]
         let data = BDSSVData(withRows: rows)
         self.demoCtrl = BDShelfStackViewController(withData: data)
         if let v = self.demoCtrl?.view {

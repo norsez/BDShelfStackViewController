@@ -7,6 +7,40 @@
 
 import UIKit
 //Vertical
+//MARK:
+fileprivate class VerticalStackCell: UITableViewCell {
+    var _customView: UIView?
+    static let TAG_CUSTOM = 9921
+    var customView: UIView? {
+        get {
+            return _customView
+        }
+        
+        set (v){
+            _customView = v
+            if let c = v {
+                c.tag = VerticalStackCell.TAG_CUSTOM
+                self.contentView.addSubview(c)
+            }
+        }
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        if let customView = self.customView {
+            customView.center = self.contentView.center
+        }
+    }
+    
+    override func prepareForReuse() {
+        if let v = self.customView {
+            v.removeFromSuperview()
+            self.customView = nil
+        }
+    }
+}
+
+//MARK:
 fileprivate class VerticalStackViewController: UITableViewController {
     fileprivate var _row: BDSSVRow?
     var row: BDSSVRow? {
@@ -23,7 +57,7 @@ fileprivate class VerticalStackViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: self.CELLID)
+        tableView.register(VerticalStackCell.self, forCellReuseIdentifier: self.CELLID)
         
         if let r = self.row {
             r.validate()
@@ -40,11 +74,12 @@ fileprivate class VerticalStackViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: self.CELLID, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: self.CELLID, for: indexPath) as! VerticalStackCell
+        cell.selectionStyle = .none
         
         if let c = self.row?.viewAtIndex {
             let v = c(indexPath.row)
-            cell.contentView.addSubview(v)
+            cell.customView = v
         }
         return cell
     }
@@ -60,9 +95,50 @@ fileprivate class VerticalStackViewController: UITableViewController {
             c(indexPath.row)
         }
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if let size = self._row?.itemSize {
+            return size.height
+        }else if let size = self._row?.sizeAtIndex {
+            return size(indexPath.row).height
+        }else {
+            return 59
+        }
+    }
 }
 
 //MARK: Horizontal
+fileprivate  class HorizontalStackCell: UICollectionViewCell {
+    var _customView: UIView?
+    static let TAG_CUSTOM = 9921
+    var customView: UIView? {
+        get {
+            return _customView
+        }
+        
+        set (v){
+            _customView = v
+            if let c = v {
+                c.tag = HorizontalStackCell.TAG_CUSTOM
+                self.contentView.addSubview(c)
+            }
+        }
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        if let customView = self.customView {
+            customView.center = self.contentView.center
+        }
+    }
+    override func prepareForReuse() {
+        if let v = self.customView {
+            v.removeFromSuperview()
+            self.customView = nil
+        }
+    }
+}
+//MARK:
 fileprivate class HorizontalStackController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     let CELLID = "CELLID"
     fileprivate var _row: BDSSVRow?
@@ -80,7 +156,7 @@ fileprivate class HorizontalStackController: UICollectionViewController, UIColle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: self.CELLID)
+        self.collectionView?.register(HorizontalStackCell.self, forCellWithReuseIdentifier: self.CELLID)
         
         if let r = self.row {
             r.validate()
@@ -97,11 +173,11 @@ fileprivate class HorizontalStackController: UICollectionViewController, UIColle
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.CELLID, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.CELLID, for: indexPath) as! HorizontalStackCell
         
         if let c = self.row?.viewAtIndex {
             let v = c(indexPath.row)
-            cell.contentView.addSubview(v)
+            cell.customView = v
         }
         return cell
     }

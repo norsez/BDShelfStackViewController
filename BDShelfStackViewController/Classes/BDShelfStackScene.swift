@@ -12,6 +12,13 @@ public enum BDSSVShelfType {
     case vertical
 }
 
+public struct BDSSVData {
+    let rows: [BDSSVRow]
+    public init(withRows r: [BDSSVRow]) {
+        self.rows = r
+    }
+}
+
 public struct BDSSVRow {
     let type: BDSSVShelfType
     public var didTapItem: ((Int)->())?
@@ -36,12 +43,6 @@ public struct BDSSVRow {
     }
 }
 
-public struct BDSSVData {
-    let rows: [BDSSVRow]
-    public init(withRows r: [BDSSVRow]) {
-        self.rows = r
-    }
-}
 
 protocol BDSSVInteracter {
     func updateStackShelf()

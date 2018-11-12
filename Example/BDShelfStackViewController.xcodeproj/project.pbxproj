@@ -15,6 +15,7 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		78BB9A0D201E1A7DF5DEB28F /* Pods_BDShelfStackViewController_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E845F88895616185F22D4C72 /* Pods_BDShelfStackViewController_Tests.framework */; };
 		78C3979D56F1ED361919FC1E /* Pods_BDShelfStackViewController_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B497231BBA05086A74488EF9 /* Pods_BDShelfStackViewController_Example.framework */; };
+		F3ADFF5B2189637000CDAF62 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ADFF5A2189637000CDAF62 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		ED6D429B3E7B72E7814C2A5D /* BDShelfStackViewController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BDShelfStackViewController.podspec; path = ../BDShelfStackViewController.podspec; sourceTree = "<group>"; };
 		EDC1868F4F0DB45B280A0CCF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F03D49CE591972831F8AD537 /* Pods-BDShelfStackViewController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BDShelfStackViewController_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BDShelfStackViewController_Tests/Pods-BDShelfStackViewController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		F3ADFF5A2189637000CDAF62 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		607FACD21AFB9204008FA782 /* Example for BDShelfStackViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F3ADFF592189635500CDAF62 /* utils */,
 				F3ADFF5821880A4900CDAF62 /* images */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
@@ -165,6 +168,14 @@
 			children = (
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		F3ADFF592189635500CDAF62 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				F3ADFF5A2189637000CDAF62 /* Utils.swift */,
+			);
+			name = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,6 +344,7 @@
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				F3ADFF5B2189637000CDAF62 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
