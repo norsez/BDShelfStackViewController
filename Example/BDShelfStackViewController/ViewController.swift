@@ -10,19 +10,34 @@ import UIKit
 import BDShelfStackViewController
 
 extension BDSSVRow {
-    
-    static func createDemoRow1() -> BDSSVRow {
-        var r = BDSSVRow(withType: .vertical , itemCount: 30, rowHeight: 250)
+    static func createHeader() -> BDSSVRow {
+        var r = BDSSVRow(withType: .horizontal, itemCount: 1, rowHeight: 80)
         r.sizeAtIndex = {
-            index in return CGSize(width: 300, height: 70)
+            index in return CGSize(width: 1138, height: 80)
+        }
+        
+        r.viewAtIndex = {
+            index in
+            let v = CellHeader(frame: CGRect(x: 0, y: 0, width: 1138, height: 80))
+            v.titleLabel.attributedText = DemoEngine.shared.allNames
+            return v
+        }
+        return r
+    }
+    static func createDemoRow1(withWidth maxWidth: CGFloat) -> BDSSVRow {
+        let ROW_HEIGHT: CGFloat = 240
+        let SIZE_HEIGHT: CGFloat = 100
+        var r = BDSSVRow(withType: .vertical , itemCount: 30, rowHeight: ROW_HEIGHT)
+        r.sizeAtIndex = {
+            index in return CGSize(width: maxWidth, height: SIZE_HEIGHT )
         }
         r.viewAtIndex = {
             index in
-            let v = UIView(frame: CGRect(x: 0, y: 0, width: 300, height: 70))
-            v.backgroundColor = UIColor.randomColor
-            let l = UILabel.label(withInt: index)
-            v.addSubview(l)
-            l.center = v.center
+            let v = CellA(frame: CGRect(x: 0, y: 0, width: maxWidth, height: SIZE_HEIGHT))
+            let item = DemoEngine.shared.nextItem
+            v.titleLabel.text = item?.name ?? ""
+            v.subtitleLabel.text = item?.artist ?? ""
+            v.imageView.image = item?.thumbnail
             return v
         }
         return r
@@ -32,11 +47,11 @@ extension BDSSVRow {
         r.itemSize = CGSize(width: 144, height: 144)
         r.viewAtIndex = {
             index in
-            let v = UIView(frame: CGRect(x: 0, y: 0, width: 144, height: 144))
-            v.backgroundColor = UIColor.randomColor
-            let l = UILabel.label(withInt: index)
-            v.addSubview(l)
-            l.center = v.center
+            let v = CellB(frame: CGRect(x: 0, y: 0, width: 144, height: 144))
+            let item = DemoEngine.shared.nextItem
+            v.titleLabel.text = "\(item?.artist ?? "")\nNew Release"
+            v.imageView.image = item?.thumbnail
+
             return v
         }
         return r
@@ -47,26 +62,39 @@ extension BDSSVRow {
         r.itemSize = CGSize(width: 72, height: 32)
         r.viewAtIndex = {
             index in
-            let v = UIView(frame: CGRect(x: 0, y: 0, width: 72, height: 32))
-            v.backgroundColor = UIColor.randomColor
-            let l = UILabel.label(withInt: index)
-            v.addSubview(l)
-            l.center = v.center
+            let v = CellB(frame: CGRect(x: 0, y: 0, width: 72, height: 32))
+            let item = DemoEngine.shared.nextItem
+            v.imageView.contentMode = .scaleAspectFill
+            v.imageView.image = item?.thumbnail
+            v.titleLabel.text = item?.name ?? ""
             return v
         }
         return r
     }
     
     static func createDemoRow4() -> BDSSVRow {
-        var r = BDSSVRow(withType: .horizontal , itemCount: 6, rowHeight: 64)
-        r.itemSize = CGSize(width: 58, height: 58)
+        var r = BDSSVRow(withType: .horizontal , itemCount: 26, rowHeight: 100)
+        r.itemSize = CGSize(width: 120, height: 100)
         r.viewAtIndex = {
             index in
-            let v = UIView(frame: CGRect(x: 0, y: 0, width: 58, height: 58))
-            v.backgroundColor = UIColor.randomColor
-            let l = UILabel.label(withInt: index)
-            v.addSubview(l)
-            l.center = v.center
+            let v = CellA(frame: CGRect(x: 0, y: 0, width: 120, height: 100))
+            let item = DemoEngine.shared.nextItem
+            v.imageView.image = item?.thumbnail
+            v.titleLabel.attributedText = "\(item?.name ?? "")".attrText(with: 12)
+            v.subtitleLabel.text = item?.artist ?? ""
+            return v
+        }
+        return r
+    }
+    
+    static func createBlankRow(withHeight h: CGFloat) -> BDSSVRow {
+        var r = BDSSVRow(withType: .vertical , itemCount: 0, rowHeight: h)
+        r.itemSize = CGSize(width: 400, height: h)
+        
+        r.viewAtIndex = {
+            index in
+            let v = UIView(frame: CGRect(x: 0, y: 0, width: 400, height: h))
+            v.backgroundColor = .white
             return v
         }
         return r
@@ -77,10 +105,14 @@ class ViewController: UIViewController {
     var demoCtrl: BDShelfStackViewController?
     override func viewDidLoad() {
         super.viewDidLoad()
-        let rows: [BDSSVRow] = [BDSSVRow.createDemoRow1(),
-                                BDSSVRow.createDemoRow2(),
-                                BDSSVRow.createDemoRow3(),
-                                BDSSVRow.createDemoRow4()]
+        self.view.backgroundColor = UIColor.white
+        let rows: [BDSSVRow] = [
+            BDSSVRow.createHeader(),
+            BDSSVRow.createDemoRow1(withWidth: self.view.bounds.width),
+            BDSSVRow.createDemoRow2(),
+            BDSSVRow.createDemoRow3(),
+            BDSSVRow.createDemoRow4(),
+            BDSSVRow.createBlankRow(withHeight: 168)]
         let data = BDSSVData(withRows: rows)
         self.demoCtrl = BDShelfStackViewController(withData: data)
         if let v = self.demoCtrl?.view {
@@ -97,39 +129,3 @@ class ViewController: UIViewController {
 
 }
 
-
-class ViewController2: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    var collectionView: UICollectionView?
-    let CELL_ID = "CELL_ID"
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let flow = UICollectionViewFlowLayout()
-        flow.itemSize = CGSize(width: 50, height: 50)
-        self.collectionView?.backgroundColor = UIColor.white
-        self.collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: flow)
-        self.collectionView?.delegate = self
-        self.collectionView?.dataSource = self
-        self.view.addSubview(self.collectionView!)
-        self.collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: self.CELL_ID)
-    }
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 100
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.CELL_ID, for: indexPath)
-        let label = UILabel(frame: CGRect(x: 0, y:0, width: 60, height: 60))
-        label.text = "\(indexPath.item)"
-        label.font = UIFont.systemFont(ofSize: 48)
-        label.textAlignment = .center
-        label.backgroundColor = UIColor(red: CGFloat.random(in: 0.3..<0.8), green: CGFloat.random(in: 0.3..<0.8), blue: CGFloat.random(in: 0.3..<0.8), alpha: 1)
-        cell.contentView.addSubview(label)
-        
-        return cell
-    }
-}

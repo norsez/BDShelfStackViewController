@@ -6,9 +6,8 @@
 //
 
 import UIKit
-//Vertical
-//MARK:
-fileprivate class VerticalStackCell: UITableViewCell {
+//MARK: Cell for vertical stack
+class VerticalStackCell: UITableViewCell {
     var _customView: UIView?
     static let TAG_CUSTOM = 9921
     var customView: UIView? {
@@ -40,8 +39,8 @@ fileprivate class VerticalStackCell: UITableViewCell {
     }
 }
 
-//MARK:
-fileprivate class VerticalStackViewController: UITableViewController {
+//MARK: table for vertical stack
+class VerticalStackViewController: UITableViewController {
     fileprivate var _row: BDSSVRow?
     var row: BDSSVRow? {
         get {
@@ -57,8 +56,8 @@ fileprivate class VerticalStackViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(VerticalStackCell.self, forCellReuseIdentifier: self.CELLID)
-        
+        self.tableView.register(VerticalStackCell.self, forCellReuseIdentifier: self.CELLID)
+        self.tableView.separatorStyle = .none
         if let r = self.row {
             r.validate()
             self.tableView.reloadData()
@@ -76,7 +75,6 @@ fileprivate class VerticalStackViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: self.CELLID, for: indexPath) as! VerticalStackCell
         cell.selectionStyle = .none
-        
         if let c = self.row?.viewAtIndex {
             let v = c(indexPath.row)
             cell.customView = v
@@ -107,97 +105,6 @@ fileprivate class VerticalStackViewController: UITableViewController {
     }
 }
 
-//MARK: Horizontal
-fileprivate  class HorizontalStackCell: UICollectionViewCell {
-    var _customView: UIView?
-    static let TAG_CUSTOM = 9921
-    var customView: UIView? {
-        get {
-            return _customView
-        }
-        
-        set (v){
-            _customView = v
-            if let c = v {
-                c.tag = HorizontalStackCell.TAG_CUSTOM
-                self.contentView.addSubview(c)
-            }
-        }
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        if let customView = self.customView {
-            customView.center = self.contentView.center
-        }
-    }
-    override func prepareForReuse() {
-        if let v = self.customView {
-            v.removeFromSuperview()
-            self.customView = nil
-        }
-    }
-}
-//MARK:
-fileprivate class HorizontalStackController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-    let CELLID = "CELLID"
-    fileprivate var _row: BDSSVRow?
-    var row: BDSSVRow? {
-        get {
-            return self._row
-        }
-        
-        set (v){
-            self._row = v
-            self._row?.validate()
-        }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        self.collectionView?.register(HorizontalStackCell.self, forCellWithReuseIdentifier: self.CELLID)
-        
-        if let r = self.row {
-            r.validate()
-            self.collectionView?.reloadData()
-        }
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self._row?.itemCount ?? 0
-    }
-    
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.CELLID, for: indexPath) as! HorizontalStackCell
-        
-        if let c = self.row?.viewAtIndex {
-            let v = c(indexPath.row)
-            cell.customView = v
-        }
-        return cell
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let c = self.row?.didTapItem {
-            c(indexPath.row)
-        }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        if let s = self.row?.sizeAtIndex {
-            return s(indexPath.item)
-        }else if let s = self.row?.itemSize {
-            return CGSize(width: s.width, height: s.height)
-        }
-        assert(false, "either self.row.sizeAtIndex or self.row.itemSize can't be nil")
-    }
-}
 
 //MARK: extension for cell
 extension UITableViewCell {

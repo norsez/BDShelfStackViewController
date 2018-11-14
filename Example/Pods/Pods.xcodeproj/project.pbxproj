@@ -8,16 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		07494037F37C742EC29CCED657784F2A /* Pods-BDShelfStackViewController_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AD6DBC6317C0411D3471DC536B5D83 /* Pods-BDShelfStackViewController_Example-dummy.m */; };
+		0E1450DA25FBCE1FDC3C569881D48C09 /* BDSSVVertical.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2194BD1D266D43FA541867AD096A27 /* BDSSVVertical.swift */; };
+		15F3A5B8006062FE73417C60038ABF52 /* BDShelfStackScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C93DEEA8AB65301D27733781607446 /* BDShelfStackScene.swift */; };
 		17E810E4D2D7E7EB30ACED24D458B4A6 /* Pods-BDShelfStackViewController_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A0B49510CB1B07C269269CCDFE861F /* Pods-BDShelfStackViewController_Tests-dummy.m */; };
 		19C637DDCB01DA6FA8B6344270F0B6AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		1ABFD739D0F3C459EDDE0D567E11A1CE /* BDShelfStackViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4535D3C7A5BA2B89900BEE63DACE6384 /* BDShelfStackViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D8D6869F95425CF927E30F3DF1E381A /* BDSSVHorizontal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A42076498441FFD316D07D7BEB84BDF /* BDSSVHorizontal.swift */; };
 		1EF8EEE79EF09DAD2CD4B4F3C3BBFE41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		4DA6B4C05A085FCE3D66D7F8ED30587F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		6DE1A8601F11F3EA593CB5D181CDD859 /* BDShelfStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80858E7817D98D9E01DF6B8E3509423 /* BDShelfStackViewController.swift */; };
-		90A74BEAC744C02872C228ABA6B7B179 /* BDShelfStackScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30170A4E5C83451E20A826D7E6288EA /* BDShelfStackScene.swift */; };
-		B8C67B257431B7CD5BBA5AE6942CF62E /* BDShelfStackViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0104D3BC8A75647AA6298B003DD9AA /* BDShelfStackViewController-dummy.m */; };
-		C022E8C32EF4937AA57D4A869A26AB4F /* BDSSVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0213F38468784C744BD4866E5A6C1BB /* BDSSVCell.swift */; };
+		5F6809859492D39CB90060ADC1E1B0ED /* BDShelfStackViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 33246D1BCF8B077385680FEE5AE0F7BA /* BDShelfStackViewController-dummy.m */; };
+		74316E4347E8C49AED292B705A2D2353 /* BDShelfStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A53CC9BBA5982E87E9762128A517952 /* BDShelfStackViewController.swift */; };
+		D048EC8913288A9FA5AA364FA9D5EA03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		F643003FD8BBD02A4350F5197FF0B34B /* Pods-BDShelfStackViewController_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 187E698BF961F7EE7EB70D3647BC6602 /* Pods-BDShelfStackViewController_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F73381F9A3FBE072EEA0444D3DC1BE17 /* BDShelfStackViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D2744B3C10CF144439B3BE94F1C2CCB7 /* BDShelfStackViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F83142D7AEA49F1FF2379955EBED1DCE /* Pods-BDShelfStackViewController_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 693BA59A48D9D78810C7811027695E36 /* Pods-BDShelfStackViewController_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -26,7 +27,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0B96F416E8BB4C93FF733BD916F53C8F;
+			remoteGlobalIDString = 8694C8E3076B7639DBCD23A591D6B9AA;
 			remoteInfo = BDShelfStackViewController;
 		};
 		6DF1CF1DDCB78DCD960F4650E7108453 /* PBXContainerItemProxy */ = {
@@ -39,59 +40,60 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04166459128185621B9353F4326B4C98 /* BDShelfStackViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BDShelfStackViewController.modulemap; sourceTree = "<group>"; };
 		06A0B49510CB1B07C269269CCDFE861F /* Pods-BDShelfStackViewController_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BDShelfStackViewController_Tests-dummy.m"; sourceTree = "<group>"; };
 		0DB25A5D914028B30806F6231367D3E3 /* Pods-BDShelfStackViewController_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BDShelfStackViewController_Tests.modulemap"; sourceTree = "<group>"; };
-		0F44568715C906357FAA9491A91A183F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		187E698BF961F7EE7EB70D3647BC6602 /* Pods-BDShelfStackViewController_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BDShelfStackViewController_Example-umbrella.h"; sourceTree = "<group>"; };
-		1E9A559D4D3DBBEADD7F6407E77AAA20 /* BDShelfStackViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BDShelfStackViewController-prefix.pch"; sourceTree = "<group>"; };
+		1A42076498441FFD316D07D7BEB84BDF /* BDSSVHorizontal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BDSSVHorizontal.swift; path = BDShelfStackViewController/Classes/BDSSVHorizontal.swift; sourceTree = "<group>"; };
 		298238F91A2EB48B1CD70DC46C4C1BB1 /* Pods-BDShelfStackViewController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BDShelfStackViewController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		29C3F355186CAB9DB0532B8329FE883B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		2D78B7EA23E3CDAD8EEA56491238E6F0 /* BDShelfStackViewController.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = BDShelfStackViewController.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		306FEFFD85AD503976492B6CE64D0A98 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		33246D1BCF8B077385680FEE5AE0F7BA /* BDShelfStackViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BDShelfStackViewController-dummy.m"; sourceTree = "<group>"; };
 		364B1D5A888A33CF0E57D282D47A2DAF /* Pods_BDShelfStackViewController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BDShelfStackViewController_Example.framework; path = "Pods-BDShelfStackViewController_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38AD6DBC6317C0411D3471DC536B5D83 /* Pods-BDShelfStackViewController_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BDShelfStackViewController_Example-dummy.m"; sourceTree = "<group>"; };
+		3A6FB4138119B94678B2CC59E610996F /* BDShelfStackViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BDShelfStackViewController.xcconfig; sourceTree = "<group>"; };
+		3F1D142AB85BFFA252B06DA0FC042A2E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		409AE3EA55CA644704D5C6ECC9BF8DB5 /* Pods-BDShelfStackViewController_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BDShelfStackViewController_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		4535D3C7A5BA2B89900BEE63DACE6384 /* BDShelfStackViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BDShelfStackViewController-umbrella.h"; sourceTree = "<group>"; };
 		4D4C3DE9949E8716A0E87B7D00AED76C /* Pods-BDShelfStackViewController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BDShelfStackViewController_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		4EB1C1E4B2E5051D560C31908A764DA2 /* Pods-BDShelfStackViewController_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BDShelfStackViewController_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		4EE1B9A802EB8CC962A2A9DEFA134FCC /* Pods-BDShelfStackViewController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BDShelfStackViewController_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		54B9FF6A08E61C2C0F4593886014C6E8 /* Pods-BDShelfStackViewController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BDShelfStackViewController_Example.release.xcconfig"; sourceTree = "<group>"; };
+		5D4232B137294A73BD5ABAC5884A1DD6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		668DAC1C1870505186EE2EF852919C50 /* Pods-BDShelfStackViewController_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BDShelfStackViewController_Example.modulemap"; sourceTree = "<group>"; };
 		693BA59A48D9D78810C7811027695E36 /* Pods-BDShelfStackViewController_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BDShelfStackViewController_Tests-umbrella.h"; sourceTree = "<group>"; };
-		6E107BBB1D54831F02CF8F377A94A0AF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		6A53CC9BBA5982E87E9762128A517952 /* BDShelfStackViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BDShelfStackViewController.swift; path = BDShelfStackViewController/Classes/BDShelfStackViewController.swift; sourceTree = "<group>"; };
 		862BA2A4E80A9F84A831B4B6B365B033 /* Pods-BDShelfStackViewController_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BDShelfStackViewController_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		880821CD2434F42CE8B9E0C10B4174B8 /* Pods-BDShelfStackViewController_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BDShelfStackViewController_Example-frameworks.sh"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9A305A9D60613308FA6A39568D4CF054 /* Pods_BDShelfStackViewController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BDShelfStackViewController_Tests.framework; path = "Pods-BDShelfStackViewController_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4C93DEEA8AB65301D27733781607446 /* BDShelfStackScene.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BDShelfStackScene.swift; path = BDShelfStackViewController/Classes/BDShelfStackScene.swift; sourceTree = "<group>"; };
 		AD17517C7EFEDF8BF2928B091F3CDF7B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADAB7C64CB235277B2AD09E34AB157AC /* Pods-BDShelfStackViewController_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BDShelfStackViewController_Example-resources.sh"; sourceTree = "<group>"; };
 		B7A8675269423F502F122EA66CC87026 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BB72D218B878525CCEB2F4EDCC1E7544 /* BDShelfStackViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BDShelfStackViewController.xcconfig; sourceTree = "<group>"; };
 		BFCFCF5813D7C2361EF6FBF6578010CC /* Pods-BDShelfStackViewController_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BDShelfStackViewController_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		CB0104D3BC8A75647AA6298B003DD9AA /* BDShelfStackViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BDShelfStackViewController-dummy.m"; sourceTree = "<group>"; };
 		D166269442EED9CCB62B9B9B1C0CA725 /* Pods-BDShelfStackViewController_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BDShelfStackViewController_Tests-resources.sh"; sourceTree = "<group>"; };
-		D2744B3C10CF144439B3BE94F1C2CCB7 /* BDShelfStackViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BDShelfStackViewController-umbrella.h"; sourceTree = "<group>"; };
-		D80858E7817D98D9E01DF6B8E3509423 /* BDShelfStackViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BDShelfStackViewController.swift; path = BDShelfStackViewController/Classes/BDShelfStackViewController.swift; sourceTree = "<group>"; };
-		E30170A4E5C83451E20A826D7E6288EA /* BDShelfStackScene.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BDShelfStackScene.swift; path = BDShelfStackViewController/Classes/BDShelfStackScene.swift; sourceTree = "<group>"; };
-		F0213F38468784C744BD4866E5A6C1BB /* BDSSVCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BDSSVCell.swift; path = BDShelfStackViewController/Classes/BDSSVCell.swift; sourceTree = "<group>"; };
+		D1EF0DB7A87A4C0A475D0BBB06AE8303 /* BDShelfStackViewController.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = BDShelfStackViewController.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		EA2194BD1D266D43FA541867AD096A27 /* BDSSVVertical.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BDSSVVertical.swift; path = BDShelfStackViewController/Classes/BDSSVVertical.swift; sourceTree = "<group>"; };
 		F5D6D0AE6744A1D1D8B73DFAF6C50E6D /* BDShelfStackViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BDShelfStackViewController.framework; path = BDShelfStackViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9395457A8240D2261177715B38A767C /* Pods-BDShelfStackViewController_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BDShelfStackViewController_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FA3B74FA28DEE1A7C4EB0BFF42A2F74B /* BDShelfStackViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BDShelfStackViewController.modulemap; sourceTree = "<group>"; };
+		FFD2815A0F405389E267E4BE3237C608 /* BDShelfStackViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BDShelfStackViewController-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		44B70849A9C9180C9AF1741CF66095D7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4DA6B4C05A085FCE3D66D7F8ED30587F /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4B4911BB075AB1F69E3373ADF6DA3161 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				19C637DDCB01DA6FA8B6344270F0B6AE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FF0C31B114D3F593482DF6C0E1B0CB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D048EC8913288A9FA5AA364FA9D5EA03 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,41 +108,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2CA9FE843D0DC0CC5E513292B8E2B455 /* Support Files */ = {
+		1588E3C87F61F51A9896B07E6DCCF0D5 /* BDShelfStackViewController */ = {
 			isa = PBXGroup;
 			children = (
-				FA3B74FA28DEE1A7C4EB0BFF42A2F74B /* BDShelfStackViewController.modulemap */,
-				BB72D218B878525CCEB2F4EDCC1E7544 /* BDShelfStackViewController.xcconfig */,
-				CB0104D3BC8A75647AA6298B003DD9AA /* BDShelfStackViewController-dummy.m */,
-				1E9A559D4D3DBBEADD7F6407E77AAA20 /* BDShelfStackViewController-prefix.pch */,
-				D2744B3C10CF144439B3BE94F1C2CCB7 /* BDShelfStackViewController-umbrella.h */,
-				0F44568715C906357FAA9491A91A183F /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/BDShelfStackViewController";
-			sourceTree = "<group>";
-		};
-		2EE70B802EE011668A660D5F376D01BA /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				2D78B7EA23E3CDAD8EEA56491238E6F0 /* BDShelfStackViewController.podspec */,
-				29C3F355186CAB9DB0532B8329FE883B /* LICENSE */,
-				6E107BBB1D54831F02CF8F377A94A0AF /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		376452A667E7601A51D9318DD0A11BA0 /* BDShelfStackViewController */ = {
-			isa = PBXGroup;
-			children = (
-				E30170A4E5C83451E20A826D7E6288EA /* BDShelfStackScene.swift */,
-				D80858E7817D98D9E01DF6B8E3509423 /* BDShelfStackViewController.swift */,
-				F0213F38468784C744BD4866E5A6C1BB /* BDSSVCell.swift */,
-				2EE70B802EE011668A660D5F376D01BA /* Pod */,
-				2CA9FE843D0DC0CC5E513292B8E2B455 /* Support Files */,
+				A4C93DEEA8AB65301D27733781607446 /* BDShelfStackScene.swift */,
+				6A53CC9BBA5982E87E9762128A517952 /* BDShelfStackViewController.swift */,
+				1A42076498441FFD316D07D7BEB84BDF /* BDSSVHorizontal.swift */,
+				EA2194BD1D266D43FA541867AD096A27 /* BDSSVVertical.swift */,
+				9436665654CDD7D68B595E44450CFFC1 /* Pod */,
+				3B500F137567C5077AA788353338C3E0 /* Support Files */,
 			);
 			name = BDShelfStackViewController;
 			path = ../..;
+			sourceTree = "<group>";
+		};
+		3B500F137567C5077AA788353338C3E0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				04166459128185621B9353F4326B4C98 /* BDShelfStackViewController.modulemap */,
+				3A6FB4138119B94678B2CC59E610996F /* BDShelfStackViewController.xcconfig */,
+				33246D1BCF8B077385680FEE5AE0F7BA /* BDShelfStackViewController-dummy.m */,
+				FFD2815A0F405389E267E4BE3237C608 /* BDShelfStackViewController-prefix.pch */,
+				4535D3C7A5BA2B89900BEE63DACE6384 /* BDShelfStackViewController-umbrella.h */,
+				5D4232B137294A73BD5ABAC5884A1DD6 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/BDShelfStackViewController";
 			sourceTree = "<group>";
 		};
 		5FA8666000DB98CCA10B8AF19FF5C838 /* Targets Support Files */ = {
@@ -152,11 +145,19 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		60FB41F6498E3AFB851C94FDBF38B6F6 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1588E3C87F61F51A9896B07E6DCCF0D5 /* BDShelfStackViewController */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				A7D3FC1A57D551FB1AEB72A156245467 /* Development Pods */,
+				60FB41F6498E3AFB851C94FDBF38B6F6 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				8D6FC3DCBDDEE487CA9E48C5F6B34130 /* Products */,
 				5FA8666000DB98CCA10B8AF19FF5C838 /* Targets Support Files */,
@@ -171,6 +172,16 @@
 				9A305A9D60613308FA6A39568D4CF054 /* Pods_BDShelfStackViewController_Tests.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		9436665654CDD7D68B595E44450CFFC1 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				D1EF0DB7A87A4C0A475D0BBB06AE8303 /* BDShelfStackViewController.podspec */,
+				306FEFFD85AD503976492B6CE64D0A98 /* LICENSE */,
+				3F1D142AB85BFFA252B06DA0FC042A2E /* README.md */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		9618ACC3B8A88CFDC78BB88534337ED9 /* Pods-BDShelfStackViewController_Tests */ = {
@@ -209,14 +220,6 @@
 			path = "Target Support Files/Pods-BDShelfStackViewController_Example";
 			sourceTree = "<group>";
 		};
-		A7D3FC1A57D551FB1AEB72A156245467 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				376452A667E7601A51D9318DD0A11BA0 /* BDShelfStackViewController */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,11 +255,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		50CB69BB711E62CE2935B3CA2B50930C /* Headers */ = {
+		EBAE0CE18776025840FA964DE91993AD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F73381F9A3FBE072EEA0444D3DC1BE17 /* BDShelfStackViewController-umbrella.h in Headers */,
+				1ABFD739D0F3C459EDDE0D567E11A1CE /* BDShelfStackViewController-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,23 +284,6 @@
 			productReference = 9A305A9D60613308FA6A39568D4CF054 /* Pods_BDShelfStackViewController_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		0B96F416E8BB4C93FF733BD916F53C8F /* BDShelfStackViewController */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E243A582FC5F9256FF253DD83BEFEA28 /* Build configuration list for PBXNativeTarget "BDShelfStackViewController" */;
-			buildPhases = (
-				E6BC53EBFB27C314280CF45A3A0319C9 /* Sources */,
-				44B70849A9C9180C9AF1741CF66095D7 /* Frameworks */,
-				50CB69BB711E62CE2935B3CA2B50930C /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = BDShelfStackViewController;
-			productName = BDShelfStackViewController;
-			productReference = F5D6D0AE6744A1D1D8B73DFAF6C50E6D /* BDShelfStackViewController.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		6150E80E52BC1020E08B82D00B7C5B42 /* Pods-BDShelfStackViewController_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7719FBB5E90F7190658CD5BF0F0FE2EC /* Build configuration list for PBXNativeTarget "Pods-BDShelfStackViewController_Example" */;
@@ -314,6 +300,23 @@
 			name = "Pods-BDShelfStackViewController_Example";
 			productName = "Pods-BDShelfStackViewController_Example";
 			productReference = 364B1D5A888A33CF0E57D282D47A2DAF /* Pods_BDShelfStackViewController_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8694C8E3076B7639DBCD23A591D6B9AA /* BDShelfStackViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B121C2A5C3676CCF06D0D1A46E7EAEA /* Build configuration list for PBXNativeTarget "BDShelfStackViewController" */;
+			buildPhases = (
+				1CFD51CAC48822A2632633E7186675A5 /* Sources */,
+				4FF0C31B114D3F593482DF6C0E1B0CB4 /* Frameworks */,
+				EBAE0CE18776025840FA964DE91993AD /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BDShelfStackViewController;
+			productName = BDShelfStackViewController;
+			productReference = F5D6D0AE6744A1D1D8B73DFAF6C50E6D /* BDShelfStackViewController.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -337,7 +340,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0B96F416E8BB4C93FF733BD916F53C8F /* BDShelfStackViewController */,
+				8694C8E3076B7639DBCD23A591D6B9AA /* BDShelfStackViewController */,
 				6150E80E52BC1020E08B82D00B7C5B42 /* Pods-BDShelfStackViewController_Example */,
 				0857A3E0C1F221B90E4E4E9C03CADF33 /* Pods-BDShelfStackViewController_Tests */,
 			);
@@ -345,22 +348,23 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1CFD51CAC48822A2632633E7186675A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15F3A5B8006062FE73417C60038ABF52 /* BDShelfStackScene.swift in Sources */,
+				5F6809859492D39CB90060ADC1E1B0ED /* BDShelfStackViewController-dummy.m in Sources */,
+				74316E4347E8C49AED292B705A2D2353 /* BDShelfStackViewController.swift in Sources */,
+				1D8D6869F95425CF927E30F3DF1E381A /* BDSSVHorizontal.swift in Sources */,
+				0E1450DA25FBCE1FDC3C569881D48C09 /* BDSSVVertical.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AF6BB1D4DCD0766DFFB9541D0E80D349 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				07494037F37C742EC29CCED657784F2A /* Pods-BDShelfStackViewController_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E6BC53EBFB27C314280CF45A3A0319C9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				90A74BEAC744C02872C228ABA6B7B179 /* BDShelfStackScene.swift in Sources */,
-				B8C67B257431B7CD5BBA5AE6942CF62E /* BDShelfStackViewController-dummy.m in Sources */,
-				6DE1A8601F11F3EA593CB5D181CDD859 /* BDShelfStackViewController.swift in Sources */,
-				C022E8C32EF4937AA57D4A869A26AB4F /* BDSSVCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,7 +382,7 @@
 		428B357E79796F6213BD9CF2CE41EB33 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = BDShelfStackViewController;
-			target = 0B96F416E8BB4C93FF733BD916F53C8F /* BDShelfStackViewController */;
+			target = 8694C8E3076B7639DBCD23A591D6B9AA /* BDShelfStackViewController */;
 			targetProxy = 3847CCDD58718B3B5DF9E00F84B142EA /* PBXContainerItemProxy */;
 		};
 		FD6EC15732C98BA601EEB140FA9A1B04 /* PBXTargetDependency */ = {
@@ -424,6 +428,38 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		4FA4B2ED2019351A56C6C4016B4243AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A6FB4138119B94678B2CC59E610996F /* BDShelfStackViewController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BDShelfStackViewController/BDShelfStackViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BDShelfStackViewController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BDShelfStackViewController/BDShelfStackViewController.modulemap";
+				PRODUCT_MODULE_NAME = BDShelfStackViewController;
+				PRODUCT_NAME = BDShelfStackViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		508E4936B445998E5146DF89C67C4A5D /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -590,6 +626,39 @@
 			};
 			name = Debug;
 		};
+		8E6C47961947C20AC2D9AE8E6DDC2DA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A6FB4138119B94678B2CC59E610996F /* BDShelfStackViewController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BDShelfStackViewController/BDShelfStackViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BDShelfStackViewController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BDShelfStackViewController/BDShelfStackViewController.modulemap";
+				PRODUCT_MODULE_NAME = BDShelfStackViewController;
+				PRODUCT_NAME = BDShelfStackViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		B42B54097A876E8A982CBF5DAA91B1AB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -648,71 +717,6 @@
 			};
 			name = Release;
 		};
-		BDCBBB8742A5E3D24E5FF5ED5D850942 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB72D218B878525CCEB2F4EDCC1E7544 /* BDShelfStackViewController.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/BDShelfStackViewController/BDShelfStackViewController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/BDShelfStackViewController/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/BDShelfStackViewController/BDShelfStackViewController.modulemap";
-				PRODUCT_MODULE_NAME = BDShelfStackViewController;
-				PRODUCT_NAME = BDShelfStackViewController;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D27D8584A07AE2113FAE472A36577277 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB72D218B878525CCEB2F4EDCC1E7544 /* BDShelfStackViewController.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/BDShelfStackViewController/BDShelfStackViewController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/BDShelfStackViewController/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/BDShelfStackViewController/BDShelfStackViewController.modulemap";
-				PRODUCT_MODULE_NAME = BDShelfStackViewController;
-				PRODUCT_NAME = BDShelfStackViewController;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -721,6 +725,15 @@
 			buildConfigurations = (
 				8B33C5230DE4A9DFA6D8F46505DD7AF7 /* Debug */,
 				B42B54097A876E8A982CBF5DAA91B1AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B121C2A5C3676CCF06D0D1A46E7EAEA /* Build configuration list for PBXNativeTarget "BDShelfStackViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FA4B2ED2019351A56C6C4016B4243AB /* Debug */,
+				8E6C47961947C20AC2D9AE8E6DDC2DA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -739,15 +752,6 @@
 			buildConfigurations = (
 				508E4936B445998E5146DF89C67C4A5D /* Debug */,
 				6EDCCD472542B15DE5149C625F2B68F1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E243A582FC5F9256FF253DD83BEFEA28 /* Build configuration list for PBXNativeTarget "BDShelfStackViewController" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BDCBBB8742A5E3D24E5FF5ED5D850942 /* Debug */,
-				D27D8584A07AE2113FAE472A36577277 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

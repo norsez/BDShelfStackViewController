@@ -16,6 +16,13 @@
 		78BB9A0D201E1A7DF5DEB28F /* Pods_BDShelfStackViewController_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E845F88895616185F22D4C72 /* Pods_BDShelfStackViewController_Tests.framework */; };
 		78C3979D56F1ED361919FC1E /* Pods_BDShelfStackViewController_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B497231BBA05086A74488EF9 /* Pods_BDShelfStackViewController_Example.framework */; };
 		F3ADFF5B2189637000CDAF62 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3ADFF5A2189637000CDAF62 /* Utils.swift */; };
+		F3E2A9D2219A814100A933D1 /* DemoEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E2A9D1219A814100A933D1 /* DemoEngine.swift */; };
+		F3E2A9D4219AB48B00A933D1 /* CellA.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3E2A9D3219AB48B00A933D1 /* CellA.xib */; };
+		F3E2A9D6219AB50C00A933D1 /* CellA.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E2A9D5219AB50C00A933D1 /* CellA.swift */; };
+		F3E2A9D8219BFE5F00A933D1 /* CellHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3E2A9D7219BFE5F00A933D1 /* CellHeader.xib */; };
+		F3E2A9DA219BFF1E00A933D1 /* CellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E2A9D9219BFF1E00A933D1 /* CellHeader.swift */; };
+		F3E2A9DC219C12EF00A933D1 /* CellB.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3E2A9DB219C12EF00A933D1 /* CellB.xib */; };
+		F3E2A9DE219C13F400A933D1 /* CellB.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E2A9DD219C13F400A933D1 /* CellB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,13 @@
 		EDC1868F4F0DB45B280A0CCF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F03D49CE591972831F8AD537 /* Pods-BDShelfStackViewController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BDShelfStackViewController_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BDShelfStackViewController_Tests/Pods-BDShelfStackViewController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F3ADFF5A2189637000CDAF62 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		F3E2A9D1219A814100A933D1 /* DemoEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoEngine.swift; sourceTree = "<group>"; };
+		F3E2A9D3219AB48B00A933D1 /* CellA.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellA.xib; sourceTree = "<group>"; };
+		F3E2A9D5219AB50C00A933D1 /* CellA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CellA.swift; path = views/CellA.swift; sourceTree = "<group>"; };
+		F3E2A9D7219BFE5F00A933D1 /* CellHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CellHeader.xib; path = views/CellHeader.xib; sourceTree = "<group>"; };
+		F3E2A9D9219BFF1E00A933D1 /* CellHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CellHeader.swift; path = views/CellHeader.swift; sourceTree = "<group>"; };
+		F3E2A9DB219C12EF00A933D1 /* CellB.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CellB.xib; path = views/CellB.xib; sourceTree = "<group>"; };
+		F3E2A9DD219C13F400A933D1 /* CellB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CellB.swift; path = views/CellB.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				F3ADFF592189635500CDAF62 /* utils */,
-				F3ADFF5821880A4900CDAF62 /* images */,
+				F3ADFF5821880A4900CDAF62 /* demo engine */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -163,11 +177,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F3ADFF5821880A4900CDAF62 /* images */ = {
+		F3ADFF5821880A4900CDAF62 /* demo engine */ = {
 			isa = PBXGroup;
 			children = (
+				F3E2A9D1219A814100A933D1 /* DemoEngine.swift */,
+				F3E2A9D3219AB48B00A933D1 /* CellA.xib */,
+				F3E2A9D5219AB50C00A933D1 /* CellA.swift */,
+				F3E2A9DB219C12EF00A933D1 /* CellB.xib */,
+				F3E2A9DD219C13F400A933D1 /* CellB.swift */,
+				F3E2A9D7219BFE5F00A933D1 /* CellHeader.xib */,
+				F3E2A9D9219BFF1E00A933D1 /* CellHeader.swift */,
 			);
-			name = images;
+			name = "demo engine";
 			sourceTree = "<group>";
 		};
 		F3ADFF592189635500CDAF62 /* utils */ = {
@@ -265,9 +286,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3E2A9D8219BFE5F00A933D1 /* CellHeader.xib in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				F3E2A9DC219C12EF00A933D1 /* CellB.xib in Resources */,
+				F3E2A9D4219AB48B00A933D1 /* CellA.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,8 +366,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3E2A9DA219BFF1E00A933D1 /* CellHeader.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				F3E2A9D6219AB50C00A933D1 /* CellA.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				F3E2A9D2219A814100A933D1 /* DemoEngine.swift in Sources */,
+				F3E2A9DE219C13F400A933D1 /* CellB.swift in Sources */,
 				F3ADFF5B2189637000CDAF62 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
