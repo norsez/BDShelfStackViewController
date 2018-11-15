@@ -23,6 +23,7 @@
 		F3E2A9DA219BFF1E00A933D1 /* CellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E2A9D9219BFF1E00A933D1 /* CellHeader.swift */; };
 		F3E2A9DC219C12EF00A933D1 /* CellB.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3E2A9DB219C12EF00A933D1 /* CellB.xib */; };
 		F3E2A9DE219C13F400A933D1 /* CellB.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E2A9DD219C13F400A933D1 /* CellB.swift */; };
+		F3E2A9E0219C306700A933D1 /* DemoRows.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E2A9DF219C306700A933D1 /* DemoRows.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		F3E2A9D9219BFF1E00A933D1 /* CellHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CellHeader.swift; path = views/CellHeader.swift; sourceTree = "<group>"; };
 		F3E2A9DB219C12EF00A933D1 /* CellB.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CellB.xib; path = views/CellB.xib; sourceTree = "<group>"; };
 		F3E2A9DD219C13F400A933D1 /* CellB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CellB.swift; path = views/CellB.swift; sourceTree = "<group>"; };
+		F3E2A9DF219C306700A933D1 /* DemoRows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DemoRows.swift; path = views/DemoRows.swift; sourceTree = "<group>"; };
+		F3E2A9E3219D1DAD00A933D1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,10 +123,12 @@
 		607FACD21AFB9204008FA782 /* Example for BDShelfStackViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F3E2A9E3219D1DAD00A933D1 /* README.md */,
 				F3ADFF592189635500CDAF62 /* utils */,
 				F3ADFF5821880A4900CDAF62 /* demo engine */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				F3E2A9DF219C306700A933D1 /* DemoRows.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -367,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3E2A9DA219BFF1E00A933D1 /* CellHeader.swift in Sources */,
+				F3E2A9E0219C306700A933D1 /* DemoRows.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				F3E2A9D6219AB50C00A933D1 /* CellA.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
