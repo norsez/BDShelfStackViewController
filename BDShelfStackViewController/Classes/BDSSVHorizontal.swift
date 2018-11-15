@@ -94,7 +94,8 @@ class HorizontalStackController: UICollectionViewController, UICollectionViewDel
             return s(indexPath.item)
         }else if let s = self.row?.itemSize {
             return CGSize(width: s.width, height: s.height)
+        }else {
+            fatalError("either self.row.sizeAtIndex or self.row.itemSize can't be nil")
         }
-        assert(false, "either self.row.sizeAtIndex or self.row.itemSize can't be nil")
     }
 }
