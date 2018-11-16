@@ -45,14 +45,16 @@ extension NSAttributedString {
 class MainViewController: UITableViewController {
     let CELL_ID = "CELLID"
     enum Demo: Int {
-        case vertical
+        case vertical, horizontal
         case mixed
-        static let ALL: [Demo] = [.vertical, .mixed]
+        static let ALL: [Demo] = [.vertical, .horizontal, .mixed]
         
         var title: String {
             switch self {
             case .vertical:
-                return "Just Table"
+                return "Simple Vertical Table"
+            case .horizontal:
+                return "Simple Horizontal Table"
             case .mixed:
                 return "Mixed Horizontal and Veritcal"
             }
@@ -61,7 +63,9 @@ class MainViewController: UITableViewController {
         var subtitle: String {
             switch self {
             case .vertical:
-                return "show the basic api of BDShelfStackViewController. "
+                return "The most basic pattern of creating a row of scrollable table"
+            case .horizontal:
+                return "Using the same the pattern as above to create a horizontal version."
             case .mixed:
                 return "building mixed horizontal and vertical tables"
             }
@@ -69,8 +73,8 @@ class MainViewController: UITableViewController {
         
         var sourcefile: String {
             switch self {
-            case .vertical:
-                return "VericalViewController.swift"
+            case .vertical, .horizontal:
+                return "SimpleDemoViewController.swift"
             case .mixed:
                 return "MixedViewController.swift"
             }
@@ -109,7 +113,13 @@ class MainViewController: UITableViewController {
         let ctrl: UIViewController
         switch item {
         case .vertical:
-            ctrl = VerticalViewController()
+            let c = SimpleDemoViewController()
+            c.shelfType = .vertical
+            ctrl = c
+        case .horizontal:
+            let c = SimpleDemoViewController()
+            c.shelfType = .horizontal
+            ctrl = c
         case .mixed:
            ctrl = MixedViewController()
         }
