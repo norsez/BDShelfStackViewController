@@ -71,7 +71,7 @@ class YourViewController: UIViewController {
         //there are a few more block variables used to customize each item's behavior and appearance in BDSSVRow
         return r
     }
-    //That's it! Check out the same project for a more detailed sample implementation
+    //That's it! Check out the sample project for a more detailed sample implementation
     
 ```
 

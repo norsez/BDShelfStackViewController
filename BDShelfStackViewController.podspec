@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BDShelfStackViewController'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'Multiple tables within table the easy way.'
 
 # This description is used to generate tags and improve search results.
@@ -26,9 +26,9 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'norsez' => 'norsez@gmail.com' }
   s.source           = { :git => 'https://github.com/norsez/BDShelfStackViewController.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://twitter.com/norsez'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'BDShelfStackViewController/Classes/**/*'
   

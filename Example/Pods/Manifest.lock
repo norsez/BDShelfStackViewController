@@ -1,5 +1,5 @@
 PODS:
-  - BDShelfStackViewController (0.1.0)
+  - BDShelfStackViewController (0.0.2)
 
 DEPENDENCIES:
   - BDShelfStackViewController (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BDShelfStackViewController: 25431ed692a43e7840f2f03f2ddca27be7c8a11e
+  BDShelfStackViewController: fa28d310e2ae8ce82d742469383bd8205b1d3955
 
 PODFILE CHECKSUM: 96f5138710fd84f700d2852ae67dc7a97a52814f
 
