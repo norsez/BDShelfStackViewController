@@ -10,7 +10,7 @@ Tables within tables – the easy way. Veritcally scrollables mixed with horizon
 
 ### Demo app
 
-![image](https://github.com/norsez/BDShelfStackViewController/blob/master/gifdemo.gif?raw=true)
+[![IMAGE ALT TEXT HERE](https://github.com/norsez/BDShelfStackViewController/blob/master/gifdemo.gif?raw=true)](https://youtu.be/2QUPNYsP1xo)
 
 ## How to use
 
