@@ -26,7 +26,7 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="STE-ef-46c">
                     <rect key="frame" x="8" y="8" width="82.5" height="82.5"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8M-Pn-1Cj">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="d8M-Pn-1Cj">
                     <rect key="frame" x="98.5" y="8" width="237.5" height="18"/>
                     <constraints>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="18" id="uxh-c8-ZLl"/>
@@ -35,7 +35,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJ8-DM-Rzw">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eJ8-DM-Rzw">
                     <rect key="frame" x="98.5" y="34" width="237.5" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="HDh-ur-RIg"/>
@@ -51,6 +51,7 @@
                 <constraint firstItem="eJ8-DM-Rzw" firstAttribute="top" secondItem="d8M-Pn-1Cj" secondAttribute="bottom" constant="8" id="4X1-oe-ZJ0"/>
                 <constraint firstItem="RFo-FV-T6m" firstAttribute="trailing" secondItem="eJ8-DM-Rzw" secondAttribute="trailing" constant="8" id="5Ut-0Z-vzI"/>
                 <constraint firstItem="STE-ef-46c" firstAttribute="top" secondItem="RFo-FV-T6m" secondAttribute="top" constant="8" id="G8O-t5-Z7X"/>
+                <constraint firstItem="RFo-FV-T6m" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="eJ8-DM-Rzw" secondAttribute="bottom" constant="8" id="KLC-fF-fEn"/>
                 <constraint firstItem="d8M-Pn-1Cj" firstAttribute="leading" secondItem="STE-ef-46c" secondAttribute="trailing" constant="8" id="Kfb-En-ta2"/>
                 <constraint firstItem="STE-ef-46c" firstAttribute="leading" secondItem="RFo-FV-T6m" secondAttribute="leading" constant="8" id="Ptr-Vp-6S2"/>
                 <constraint firstItem="STE-ef-46c" firstAttribute="height" secondItem="FUM-e9-NiU" secondAttribute="height" multiplier="0.85" id="WUO-P6-6YL"/>

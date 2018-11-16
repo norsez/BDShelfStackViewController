@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BDShelfStackViewController'
-  s.version          = '0.0.2'
-  s.summary          = 'Multiple tables within table the easy way.'
+  s.version          = '0.0.3'
+  s.summary          = 'Create different multiple tables within one UIView, the easy way (?)'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -40,5 +40,5 @@ Pod::Spec.new do |s|
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 
-    s.swift_version = '4.0'
+  s.swift_version = '4.0'
 end

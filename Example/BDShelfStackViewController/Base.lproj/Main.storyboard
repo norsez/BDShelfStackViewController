@@ -12,8 +12,8 @@
         <!--Shelf Stack-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController title="Shelf Stack" hidesBottomBarWhenPushed="YES" id="vXZ-lx-hvc" customClass="ViewController" customModule="BDShelfStackViewController_Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" title="Shelf Stack" id="yAx-D2-fCK"/>
+                <viewController title="Shelf Stack" hidesBottomBarWhenPushed="YES" id="vXZ-lx-hvc" customClass="MainViewController" customModule="BDShelfStackViewController_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Demo" id="yAx-D2-fCK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

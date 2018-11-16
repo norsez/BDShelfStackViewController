@@ -12,7 +12,7 @@ import BDShelfStackViewController
  * The main ViewController for the demo app
  *
  **/
-class ViewController: UIViewController {
+class MixedViewController: UIViewController {
     var demoCtrl: BDShelfStackViewController?
     override func viewDidLoad() {
         super.viewDidLoad()
