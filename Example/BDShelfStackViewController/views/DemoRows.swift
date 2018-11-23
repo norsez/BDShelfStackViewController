@@ -17,14 +17,15 @@ extension BDSSVRow {
     
     static func createHeader() -> BDSSVRow {
         //A row can be either horizontal or vertical
-        var r = BDSSVRow(withType: .horizontal, itemCount: 1, rowHeight: 80)
+        let HEIGHT_1: CGFloat = CGFloat.random(in: 80..<100)
+        var r = BDSSVRow(withType: .horizontal, itemCount: 1, rowHeight: HEIGHT_1)
         r.sizeAtIndex = {
-            index in return CGSize(width: 1138, height: 80)
+            index in return CGSize(width: 1138, height: HEIGHT_1)
         }
         
         r.viewAtIndex = {
             index in
-            let v = CellHeader(frame: CGRect(x: 0, y: 0, width: 1138, height: 80))
+            let v = CellHeader(frame: CGRect(x: 0, y: 0, width: 1138, height: HEIGHT_1))
             v.titleLabel.attributedText = DemoEngine.shared.allNames
             return v
         }
@@ -33,13 +34,13 @@ extension BDSSVRow {
     }
     
     static func createDemoRow1(withWidth maxWidth: CGFloat) -> BDSSVRow {
-        let ROW_HEIGHT: CGFloat = 240
+        let ROW_HEIGHT: CGFloat = CGFloat.random(in: 280..<320)
         let SIZE_HEIGHT: CGFloat = 100
-        var r = BDSSVRow(withType: .vertical , itemCount: 30, rowHeight: ROW_HEIGHT)
+        var r = BDSSVRow(withType: .vertical , itemCount: 37, rowHeight: ROW_HEIGHT)
         r.sizeAtIndex = {
             index in return CGSize(width: maxWidth, height: SIZE_HEIGHT )
         }
-        
+        let bgColor = UIColor.randomColor
         r.viewAtIndex = {
             index in
             let v = CellA(frame: CGRect(x: 0, y: 0, width: maxWidth, height: SIZE_HEIGHT))
@@ -47,17 +48,20 @@ extension BDSSVRow {
             v.titleLabel.text = item?.name ?? ""
             v.subtitleLabel.text = item?.artist ?? ""
             v.imageView.image = item?.thumbnail
+            v.backgroundColor = bgColor
             return v
         }
         return r
     }
     
     static func createDemoRow2() -> BDSSVRow {
-        var r = BDSSVRow(withType: .horizontal , itemCount: 35, rowHeight: 158)
-        r.itemSize = CGSize(width: 144, height: 144)
+        let HEIGHT = CGFloat.random(in: 158..<210)
+        var r = BDSSVRow(withType: .horizontal , itemCount: 35, rowHeight: HEIGHT)
+        let DIM = HEIGHT * 0.74
+        r.itemSize = CGSize(width: DIM, height: DIM)
         r.viewAtIndex = {
             index in
-            let v = CellB(frame: CGRect(x: 0, y: 0, width: 144, height: 144))
+            let v = CellB(frame: CGRect(x: 0, y: 0, width: DIM * 1.4, height: DIM))
             let item = DemoEngine.shared.nextItem
             v.titleLabel.text = "\(item?.artist ?? "")\nNew Release"
             v.imageView.image = item?.thumbnail
@@ -68,11 +72,13 @@ extension BDSSVRow {
     }
     
     static func createDemoRow3() -> BDSSVRow {
-        var r = BDSSVRow(withType: .horizontal , itemCount: 50, rowHeight: 42)
-        r.itemSize = CGSize(width: 72, height: 32)
+        let HEIGHT = CGFloat.random(in: 42..<66)
+        var r = BDSSVRow(withType: .horizontal , itemCount: 53, rowHeight: HEIGHT)
+        let WIDTH = CGFloat.random(in: 72..<120)
+        r.itemSize = CGSize(width: WIDTH, height: HEIGHT * 0.9)
         r.viewAtIndex = {
             index in
-            let v = CellB(frame: CGRect(x: 0, y: 0, width: 72, height: 32))
+            let v = CellB(frame: CGRect(x: 0, y: 0, width: WIDTH, height: HEIGHT * 0.9))
             let item = DemoEngine.shared.nextItem
             v.imageView.contentMode = .scaleAspectFill
             v.imageView.image = item?.thumbnail
@@ -83,11 +89,15 @@ extension BDSSVRow {
     }
     
     static func createDemoRow4() -> BDSSVRow {
-        var r = BDSSVRow(withType: .horizontal , itemCount: 26, rowHeight: 100)
-        r.itemSize = CGSize(width: 120, height: 100)
+        let HEIGHT = CGFloat.random(in: 100..<180)
+        var r = BDSSVRow(withType: .horizontal , itemCount: 26, rowHeight: HEIGHT)
+        let WIDTH = CGFloat.random(in: 90..<153)
+        r.itemSize = CGSize(width: WIDTH, height: HEIGHT * 0.9)
+        let bgColor = UIColor.randomColor
         r.viewAtIndex = {
             index in
-            let v = CellA(frame: CGRect(x: 0, y: 0, width: 120, height: 100))
+            let v = CellA(frame: CGRect(x: 0, y: 0, width: WIDTH, height: HEIGHT * 0.9))
+            v.backgroundColor = bgColor
             let item = DemoEngine.shared.nextItem
             v.imageView.image = item?.thumbnail
             v.titleLabel.attributedText = "\(item?.name ?? "")".attrText(with: 12)

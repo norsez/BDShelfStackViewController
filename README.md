@@ -88,8 +88,10 @@ class YourViewController: UIViewController {
 ## What's new in 0.0.4
 - remove `init(withData:)`. Now use `createShelfStack(with:)` to initialize the view of shelf stack
 - add method to reload the stack at the specified index - `reloadRow(at:,flash:)`
-- add AutoupdatedMixedViewController in Example project to demostrate the use of `reloadRow(at:,flash:)`
 - add `replaceRow(at:,with:)` for replacing a `BDSSVRow` in case you need to completely change both the behavior and the look of a stack row. Each call of this method will expensively recreate the entire shelf stack view.
+- add AutoupdatedMixedViewController in Example project to demostrate the use of `reloadRow(at:,flash:)`
+
+
 
 ## Example
 

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import BDShelfStackViewController
 class AutoupdatedMixedViewController: MixedViewController {
     var timer: Timer?
     var indexToUpdate: Int = 0
@@ -20,13 +20,12 @@ class AutoupdatedMixedViewController: MixedViewController {
     }
     
     @objc func updateTimer () {
-        self.title = "\(timeCount)s to update…"
+        self.title = "\(timeCount)…"
         timeCount = timeCount.advanced(by: 1) % SECS_TO_UPDATE
     }
     
     @objc func updateDemoRow () {
         if let _ = self.data?.rows[self.indexToUpdate] {
-            
             // use .reloadRow(at:) to reload a row.
             self.demoCtrl?.reloadRow(at: self.indexToUpdate, flash: true)
             indexToUpdate = indexToUpdate.advanced(by: 1) % self.data!.rows.count

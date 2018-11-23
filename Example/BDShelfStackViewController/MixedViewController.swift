@@ -27,7 +27,7 @@ class MixedViewController: UIViewController {
             BDSSVRow.createDemoRow2(),
             BDSSVRow.createDemoRow3(),
             BDSSVRow.createDemoRow4(),
-            BDSSVRow.createBlankRow(withHeight: 168)]
+            BDSSVRow.createBlankRow(withHeight: 500)]
         
         self.data = BDSSVData(withRows: rows)
         self.demoCtrl = BDShelfStackViewController(nibName: nil, bundle: nil)
