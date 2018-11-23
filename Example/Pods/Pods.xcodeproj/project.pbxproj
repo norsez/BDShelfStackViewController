@@ -8,15 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		07494037F37C742EC29CCED657784F2A /* Pods-BDShelfStackViewController_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 38AD6DBC6317C0411D3471DC536B5D83 /* Pods-BDShelfStackViewController_Example-dummy.m */; };
-		0E1450DA25FBCE1FDC3C569881D48C09 /* BDSSVVertical.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2194BD1D266D43FA541867AD096A27 /* BDSSVVertical.swift */; };
-		15F3A5B8006062FE73417C60038ABF52 /* BDShelfStackScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C93DEEA8AB65301D27733781607446 /* BDShelfStackScene.swift */; };
+		109397CE0791D1EEC49378296AD2B7F9 /* DataRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABAE5169FD539EB67790952F8F99591E /* DataRow.swift */; };
 		17E810E4D2D7E7EB30ACED24D458B4A6 /* Pods-BDShelfStackViewController_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A0B49510CB1B07C269269CCDFE861F /* Pods-BDShelfStackViewController_Tests-dummy.m */; };
 		19C637DDCB01DA6FA8B6344270F0B6AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		1ABFD739D0F3C459EDDE0D567E11A1CE /* BDShelfStackViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4535D3C7A5BA2B89900BEE63DACE6384 /* BDShelfStackViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D8D6869F95425CF927E30F3DF1E381A /* BDSSVHorizontal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A42076498441FFD316D07D7BEB84BDF /* BDSSVHorizontal.swift */; };
+		1ABFD739D0F3C459EDDE0D567E11A1CE /* BDShelfStackViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E4AF6B50DC565435B06A9DE0511F5E /* BDShelfStackViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1EF8EEE79EF09DAD2CD4B4F3C3BBFE41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		5F6809859492D39CB90060ADC1E1B0ED /* BDShelfStackViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 33246D1BCF8B077385680FEE5AE0F7BA /* BDShelfStackViewController-dummy.m */; };
-		74316E4347E8C49AED292B705A2D2353 /* BDShelfStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A53CC9BBA5982E87E9762128A517952 /* BDShelfStackViewController.swift */; };
+		3364D3A6932EB25AC847FEDF1B65BB8A /* BDSSVHorizontal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9308EE1AD20AC6B4EB3D15176E6DC785 /* BDSSVHorizontal.swift */; };
+		91685E6E46489E7ECA369EA07D3BF9D5 /* BDShelfStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03256530F4CAAE7FB26C0DF8573B0AF0 /* BDShelfStackViewController.swift */; };
+		CBE81504A2CA772937470DD3471D41CC /* BDShelfStackViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A427945084132F81D649E136EBCA80ED /* BDShelfStackViewController-dummy.m */; };
+		CD9C28155FEACDBB8BB46FEC31BF2CB2 /* BDSSVVertical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF0B6DE598480B4E2DAF4A611F1DDF3 /* BDSSVVertical.swift */; };
 		D048EC8913288A9FA5AA364FA9D5EA03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		F643003FD8BBD02A4350F5197FF0B34B /* Pods-BDShelfStackViewController_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 187E698BF961F7EE7EB70D3647BC6602 /* Pods-BDShelfStackViewController_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F83142D7AEA49F1FF2379955EBED1DCE /* Pods-BDShelfStackViewController_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 693BA59A48D9D78810C7811027695E36 /* Pods-BDShelfStackViewController_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -40,44 +40,44 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04166459128185621B9353F4326B4C98 /* BDShelfStackViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BDShelfStackViewController.modulemap; sourceTree = "<group>"; };
+		03256530F4CAAE7FB26C0DF8573B0AF0 /* BDShelfStackViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BDShelfStackViewController.swift; path = BDShelfStackViewController/Classes/BDShelfStackViewController.swift; sourceTree = "<group>"; };
 		06A0B49510CB1B07C269269CCDFE861F /* Pods-BDShelfStackViewController_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BDShelfStackViewController_Tests-dummy.m"; sourceTree = "<group>"; };
+		07E4AF6B50DC565435B06A9DE0511F5E /* BDShelfStackViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BDShelfStackViewController-umbrella.h"; sourceTree = "<group>"; };
 		0DB25A5D914028B30806F6231367D3E3 /* Pods-BDShelfStackViewController_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BDShelfStackViewController_Tests.modulemap"; sourceTree = "<group>"; };
 		187E698BF961F7EE7EB70D3647BC6602 /* Pods-BDShelfStackViewController_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BDShelfStackViewController_Example-umbrella.h"; sourceTree = "<group>"; };
-		1A42076498441FFD316D07D7BEB84BDF /* BDSSVHorizontal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BDSSVHorizontal.swift; path = BDShelfStackViewController/Classes/BDSSVHorizontal.swift; sourceTree = "<group>"; };
 		298238F91A2EB48B1CD70DC46C4C1BB1 /* Pods-BDShelfStackViewController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BDShelfStackViewController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		306FEFFD85AD503976492B6CE64D0A98 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		33246D1BCF8B077385680FEE5AE0F7BA /* BDShelfStackViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BDShelfStackViewController-dummy.m"; sourceTree = "<group>"; };
 		364B1D5A888A33CF0E57D282D47A2DAF /* Pods_BDShelfStackViewController_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BDShelfStackViewController_Example.framework; path = "Pods-BDShelfStackViewController_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38AD6DBC6317C0411D3471DC536B5D83 /* Pods-BDShelfStackViewController_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BDShelfStackViewController_Example-dummy.m"; sourceTree = "<group>"; };
-		3A6FB4138119B94678B2CC59E610996F /* BDShelfStackViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BDShelfStackViewController.xcconfig; sourceTree = "<group>"; };
-		3F1D142AB85BFFA252B06DA0FC042A2E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		3929882B2A34A54260854545DC75A325 /* BDShelfStackViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BDShelfStackViewController.xcconfig; sourceTree = "<group>"; };
 		409AE3EA55CA644704D5C6ECC9BF8DB5 /* Pods-BDShelfStackViewController_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BDShelfStackViewController_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		4535D3C7A5BA2B89900BEE63DACE6384 /* BDShelfStackViewController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BDShelfStackViewController-umbrella.h"; sourceTree = "<group>"; };
 		4D4C3DE9949E8716A0E87B7D00AED76C /* Pods-BDShelfStackViewController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BDShelfStackViewController_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		4EB1C1E4B2E5051D560C31908A764DA2 /* Pods-BDShelfStackViewController_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BDShelfStackViewController_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		4EE1B9A802EB8CC962A2A9DEFA134FCC /* Pods-BDShelfStackViewController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BDShelfStackViewController_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		54B9FF6A08E61C2C0F4593886014C6E8 /* Pods-BDShelfStackViewController_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BDShelfStackViewController_Example.release.xcconfig"; sourceTree = "<group>"; };
-		5D4232B137294A73BD5ABAC5884A1DD6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58DD3E0FC955C49AC7A437F98761C7CD /* BDShelfStackViewController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BDShelfStackViewController.modulemap; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		668DAC1C1870505186EE2EF852919C50 /* Pods-BDShelfStackViewController_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BDShelfStackViewController_Example.modulemap"; sourceTree = "<group>"; };
 		693BA59A48D9D78810C7811027695E36 /* Pods-BDShelfStackViewController_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BDShelfStackViewController_Tests-umbrella.h"; sourceTree = "<group>"; };
-		6A53CC9BBA5982E87E9762128A517952 /* BDShelfStackViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BDShelfStackViewController.swift; path = BDShelfStackViewController/Classes/BDShelfStackViewController.swift; sourceTree = "<group>"; };
+		7AFCDE19810C6C93FC73854D89417D84 /* BDShelfStackViewController.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = BDShelfStackViewController.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		7BA11AC350AEA190504F975954F02A43 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		862BA2A4E80A9F84A831B4B6B365B033 /* Pods-BDShelfStackViewController_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BDShelfStackViewController_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		880821CD2434F42CE8B9E0C10B4174B8 /* Pods-BDShelfStackViewController_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BDShelfStackViewController_Example-frameworks.sh"; sourceTree = "<group>"; };
+		8CF0B6DE598480B4E2DAF4A611F1DDF3 /* BDSSVVertical.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BDSSVVertical.swift; path = BDShelfStackViewController/Classes/BDSSVVertical.swift; sourceTree = "<group>"; };
+		9308EE1AD20AC6B4EB3D15176E6DC785 /* BDSSVHorizontal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BDSSVHorizontal.swift; path = BDShelfStackViewController/Classes/BDSSVHorizontal.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9A305A9D60613308FA6A39568D4CF054 /* Pods_BDShelfStackViewController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BDShelfStackViewController_Tests.framework; path = "Pods-BDShelfStackViewController_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A4C93DEEA8AB65301D27733781607446 /* BDShelfStackScene.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BDShelfStackScene.swift; path = BDShelfStackViewController/Classes/BDShelfStackScene.swift; sourceTree = "<group>"; };
+		A427945084132F81D649E136EBCA80ED /* BDShelfStackViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BDShelfStackViewController-dummy.m"; sourceTree = "<group>"; };
+		ABAE5169FD539EB67790952F8F99591E /* DataRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataRow.swift; path = BDShelfStackViewController/Classes/DataRow.swift; sourceTree = "<group>"; };
 		AD17517C7EFEDF8BF2928B091F3CDF7B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADAB7C64CB235277B2AD09E34AB157AC /* Pods-BDShelfStackViewController_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BDShelfStackViewController_Example-resources.sh"; sourceTree = "<group>"; };
+		AEB149B25D3B5E26A673E3A8BDD0A47D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7A8675269423F502F122EA66CC87026 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFCFCF5813D7C2361EF6FBF6578010CC /* Pods-BDShelfStackViewController_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BDShelfStackViewController_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		C39BFAB9EB66BABAEE902909B33F18B6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		C6E2A0896FEA20ED8836F6E361768FB4 /* BDShelfStackViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BDShelfStackViewController-prefix.pch"; sourceTree = "<group>"; };
 		D166269442EED9CCB62B9B9B1C0CA725 /* Pods-BDShelfStackViewController_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BDShelfStackViewController_Tests-resources.sh"; sourceTree = "<group>"; };
-		D1EF0DB7A87A4C0A475D0BBB06AE8303 /* BDShelfStackViewController.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = BDShelfStackViewController.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		EA2194BD1D266D43FA541867AD096A27 /* BDSSVVertical.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BDSSVVertical.swift; path = BDShelfStackViewController/Classes/BDSSVVertical.swift; sourceTree = "<group>"; };
 		F5D6D0AE6744A1D1D8B73DFAF6C50E6D /* BDShelfStackViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BDShelfStackViewController.framework; path = BDShelfStackViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9395457A8240D2261177715B38A767C /* Pods-BDShelfStackViewController_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BDShelfStackViewController_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FFD2815A0F405389E267E4BE3237C608 /* BDShelfStackViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BDShelfStackViewController-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,32 +108,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1588E3C87F61F51A9896B07E6DCCF0D5 /* BDShelfStackViewController */ = {
+		44D89710C44900239F1773E948CDF93C /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				A4C93DEEA8AB65301D27733781607446 /* BDShelfStackScene.swift */,
-				6A53CC9BBA5982E87E9762128A517952 /* BDShelfStackViewController.swift */,
-				1A42076498441FFD316D07D7BEB84BDF /* BDSSVHorizontal.swift */,
-				EA2194BD1D266D43FA541867AD096A27 /* BDSSVVertical.swift */,
-				9436665654CDD7D68B595E44450CFFC1 /* Pod */,
-				3B500F137567C5077AA788353338C3E0 /* Support Files */,
+				7AFCDE19810C6C93FC73854D89417D84 /* BDShelfStackViewController.podspec */,
+				C39BFAB9EB66BABAEE902909B33F18B6 /* LICENSE */,
+				7BA11AC350AEA190504F975954F02A43 /* README.md */,
 			);
-			name = BDShelfStackViewController;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		3B500F137567C5077AA788353338C3E0 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				04166459128185621B9353F4326B4C98 /* BDShelfStackViewController.modulemap */,
-				3A6FB4138119B94678B2CC59E610996F /* BDShelfStackViewController.xcconfig */,
-				33246D1BCF8B077385680FEE5AE0F7BA /* BDShelfStackViewController-dummy.m */,
-				FFD2815A0F405389E267E4BE3237C608 /* BDShelfStackViewController-prefix.pch */,
-				4535D3C7A5BA2B89900BEE63DACE6384 /* BDShelfStackViewController-umbrella.h */,
-				5D4232B137294A73BD5ABAC5884A1DD6 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/BDShelfStackViewController";
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		5FA8666000DB98CCA10B8AF19FF5C838 /* Targets Support Files */ = {
@@ -148,7 +130,7 @@
 		60FB41F6498E3AFB851C94FDBF38B6F6 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				1588E3C87F61F51A9896B07E6DCCF0D5 /* BDShelfStackViewController */,
+				E2FD866FB21E385B952E75593F130046 /* BDShelfStackViewController */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -172,16 +154,6 @@
 				9A305A9D60613308FA6A39568D4CF054 /* Pods_BDShelfStackViewController_Tests.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		9436665654CDD7D68B595E44450CFFC1 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				D1EF0DB7A87A4C0A475D0BBB06AE8303 /* BDShelfStackViewController.podspec */,
-				306FEFFD85AD503976492B6CE64D0A98 /* LICENSE */,
-				3F1D142AB85BFFA252B06DA0FC042A2E /* README.md */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 		9618ACC3B8A88CFDC78BB88534337ED9 /* Pods-BDShelfStackViewController_Tests */ = {
@@ -220,6 +192,20 @@
 			path = "Target Support Files/Pods-BDShelfStackViewController_Example";
 			sourceTree = "<group>";
 		};
+		BA73E2F3296C48B20C0CDF09B7D45DB7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				58DD3E0FC955C49AC7A437F98761C7CD /* BDShelfStackViewController.modulemap */,
+				3929882B2A34A54260854545DC75A325 /* BDShelfStackViewController.xcconfig */,
+				A427945084132F81D649E136EBCA80ED /* BDShelfStackViewController-dummy.m */,
+				C6E2A0896FEA20ED8836F6E361768FB4 /* BDShelfStackViewController-prefix.pch */,
+				07E4AF6B50DC565435B06A9DE0511F5E /* BDShelfStackViewController-umbrella.h */,
+				AEB149B25D3B5E26A673E3A8BDD0A47D /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/BDShelfStackViewController";
+			sourceTree = "<group>";
+		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +220,20 @@
 				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		E2FD866FB21E385B952E75593F130046 /* BDShelfStackViewController */ = {
+			isa = PBXGroup;
+			children = (
+				03256530F4CAAE7FB26C0DF8573B0AF0 /* BDShelfStackViewController.swift */,
+				9308EE1AD20AC6B4EB3D15176E6DC785 /* BDSSVHorizontal.swift */,
+				8CF0B6DE598480B4E2DAF4A611F1DDF3 /* BDSSVVertical.swift */,
+				ABAE5169FD539EB67790952F8F99591E /* DataRow.swift */,
+				44D89710C44900239F1773E948CDF93C /* Pod */,
+				BA73E2F3296C48B20C0CDF09B7D45DB7 /* Support Files */,
+			);
+			name = BDShelfStackViewController;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,7 +306,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6B121C2A5C3676CCF06D0D1A46E7EAEA /* Build configuration list for PBXNativeTarget "BDShelfStackViewController" */;
 			buildPhases = (
-				1CFD51CAC48822A2632633E7186675A5 /* Sources */,
+				276DBD45A341634F0767B03B27F4FE91 /* Sources */,
 				4FF0C31B114D3F593482DF6C0E1B0CB4 /* Frameworks */,
 				EBAE0CE18776025840FA964DE91993AD /* Headers */,
 			);
@@ -348,15 +348,15 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1CFD51CAC48822A2632633E7186675A5 /* Sources */ = {
+		276DBD45A341634F0767B03B27F4FE91 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15F3A5B8006062FE73417C60038ABF52 /* BDShelfStackScene.swift in Sources */,
-				5F6809859492D39CB90060ADC1E1B0ED /* BDShelfStackViewController-dummy.m in Sources */,
-				74316E4347E8C49AED292B705A2D2353 /* BDShelfStackViewController.swift in Sources */,
-				1D8D6869F95425CF927E30F3DF1E381A /* BDSSVHorizontal.swift in Sources */,
-				0E1450DA25FBCE1FDC3C569881D48C09 /* BDSSVVertical.swift in Sources */,
+				CBE81504A2CA772937470DD3471D41CC /* BDShelfStackViewController-dummy.m in Sources */,
+				91685E6E46489E7ECA369EA07D3BF9D5 /* BDShelfStackViewController.swift in Sources */,
+				3364D3A6932EB25AC847FEDF1B65BB8A /* BDSSVHorizontal.swift in Sources */,
+				CD9C28155FEACDBB8BB46FEC31BF2CB2 /* BDSSVVertical.swift in Sources */,
+				109397CE0791D1EEC49378296AD2B7F9 /* DataRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,7 +654,7 @@
 		};
 		B8EF431B9FA711DEEE16E1329F552E6F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A6FB4138119B94678B2CC59E610996F /* BDShelfStackViewController.xcconfig */;
+			baseConfigurationReference = 3929882B2A34A54260854545DC75A325 /* BDShelfStackViewController.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -687,7 +687,7 @@
 		};
 		C1ACA21C78F60128E0F2A47E73663CA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A6FB4138119B94678B2CC59E610996F /* BDShelfStackViewController.xcconfig */;
+			baseConfigurationReference = 3929882B2A34A54260854545DC75A325 /* BDShelfStackViewController.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

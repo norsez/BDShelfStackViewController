@@ -7,6 +7,10 @@
 
 import UIKit
 
+/**
+ Model exposed to framework's client.
+ */
+
 public enum BDSSVShelfType {
     case horizontal
     case vertical
@@ -19,6 +23,9 @@ public struct BDSSVData {
     }
 }
 
+/**
+ * 
+ */
 public struct BDSSVRow {
     let type: BDSSVShelfType
     public var didTapItem: ((Int)->())?
@@ -42,21 +49,3 @@ public struct BDSSVRow {
         self.rowHeight = rowHeight
     }
 }
-
-
-protocol BDSSVInteracter {
-    func updateStackShelf()
-}
-
-protocol BDSSVPresenter {
-    
-}
-
-protocol BDSSVViewInput {
-    
-}
-
-protocol BDSSVDelegate {
-    
-}
-

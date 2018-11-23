@@ -26,6 +26,7 @@
 		F3E2A9E0219C306700A933D1 /* DemoRows.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E2A9DF219C306700A933D1 /* DemoRows.swift */; };
 		F3E2AA04219E6B9F00A933D1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E2AA03219E6B9F00A933D1 /* MainViewController.swift */; };
 		F3E2AA06219E862600A933D1 /* SimpleDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E2AA05219E862600A933D1 /* SimpleDemoViewController.swift */; };
+		F3E2AA0A21A2828F00A933D1 /* AutoupdatedMixedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E2AA0921A2828F00A933D1 /* AutoupdatedMixedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +56,7 @@
 		B987F1A3C2214EBBBAC328D7 /* Pods-BDShelfStackViewController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BDShelfStackViewController_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BDShelfStackViewController_Example/Pods-BDShelfStackViewController_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E6DF1BF506B3F09F86201D88 /* Pods-BDShelfStackViewController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BDShelfStackViewController_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BDShelfStackViewController_Tests/Pods-BDShelfStackViewController_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E845F88895616185F22D4C72 /* Pods_BDShelfStackViewController_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BDShelfStackViewController_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED6D429B3E7B72E7814C2A5D /* BDShelfStackViewController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BDShelfStackViewController.podspec; path = ../BDShelfStackViewController.podspec; sourceTree = "<group>"; };
+		ED6D429B3E7B72E7814C2A5D /* BDShelfStackViewController.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BDShelfStackViewController.podspec; path = ../BDShelfStackViewController.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		EDC1868F4F0DB45B280A0CCF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F03D49CE591972831F8AD537 /* Pods-BDShelfStackViewController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BDShelfStackViewController_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BDShelfStackViewController_Tests/Pods-BDShelfStackViewController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F3ADFF5A2189637000CDAF62 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -70,6 +71,7 @@
 		F3E2A9E3219D1DAD00A933D1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
 		F3E2AA03219E6B9F00A933D1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F3E2AA05219E862600A933D1 /* SimpleDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleDemoViewController.swift; sourceTree = "<group>"; };
+		F3E2AA0921A2828F00A933D1 /* AutoupdatedMixedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoupdatedMixedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,9 +133,10 @@
 				F3ADFF592189635500CDAF62 /* utils */,
 				F3ADFF5821880A4900CDAF62 /* demo engine */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				F3E2AA03219E6B9F00A933D1 /* MainViewController.swift */,
 				607FACD71AFB9204008FA782 /* MixedViewController.swift */,
 				F3E2AA05219E862600A933D1 /* SimpleDemoViewController.swift */,
-				F3E2AA03219E6B9F00A933D1 /* MainViewController.swift */,
+				F3E2AA0921A2828F00A933D1 /* AutoupdatedMixedViewController.swift */,
 				F3E2A9DF219C306700A933D1 /* DemoRows.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
@@ -380,6 +383,7 @@
 				F3E2A9DA219BFF1E00A933D1 /* CellHeader.swift in Sources */,
 				F3E2A9E0219C306700A933D1 /* DemoRows.swift in Sources */,
 				607FACD81AFB9204008FA782 /* MixedViewController.swift in Sources */,
+				F3E2AA0A21A2828F00A933D1 /* AutoupdatedMixedViewController.swift in Sources */,
 				F3E2A9D6219AB50C00A933D1 /* CellA.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				F3E2A9D2219A814100A933D1 /* DemoEngine.swift in Sources */,

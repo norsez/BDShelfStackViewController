@@ -46,8 +46,9 @@ class MainViewController: UITableViewController {
     let CELL_ID = "CELLID"
     enum Demo: Int {
         case vertical, horizontal
-        case mixed
-        static let ALL: [Demo] = [.vertical, .horizontal, .mixed]
+        case mixed, mixedUpdate
+        static let ALL: [Demo] = [.vertical, .horizontal, .mixed, .mixedUpdate]
+        
         
         var title: String {
             switch self {
@@ -57,6 +58,8 @@ class MainViewController: UITableViewController {
                 return "Simple Horizontal Table"
             case .mixed:
                 return "Mixed Horizontal and Veritcal"
+            case .mixedUpdate:
+                return "Update a stack row"
             }
         }
         
@@ -68,6 +71,8 @@ class MainViewController: UITableViewController {
                 return "Using the same the pattern as above to create a horizontal version."
             case .mixed:
                 return "building mixed horizontal and vertical tables"
+            case .mixedUpdate:
+                return "Build on mixed tables. This is how you update stack rows."
             }
         }
         
@@ -77,6 +82,8 @@ class MainViewController: UITableViewController {
                 return "SimpleDemoViewController.swift"
             case .mixed:
                 return "MixedViewController.swift"
+            case .mixedUpdate:
+                return "AutoupdatedMixedViewController.swift"
             }
         }
     }
@@ -122,6 +129,8 @@ class MainViewController: UITableViewController {
             ctrl = c
         case .mixed:
            ctrl = MixedViewController()
+        case .mixedUpdate:
+            ctrl = AutoupdatedMixedViewController()
         }
         self.navigationController?.pushViewController(ctrl, animated: true)
     }

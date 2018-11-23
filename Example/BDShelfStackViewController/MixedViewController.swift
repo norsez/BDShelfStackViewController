@@ -28,7 +28,8 @@ class MixedViewController: UIViewController {
             BDSSVRow.createDemoRow4(),
             BDSSVRow.createBlankRow(withHeight: 168)]
         let data = BDSSVData(withRows: rows)
-        self.demoCtrl = BDShelfStackViewController(withData: data)
+        self.demoCtrl = BDShelfStackViewController(nibName: nil, bundle: nil)
+        self.demoCtrl?.createShelfStack(with: data)
         self.demoCtrl?.view.backgroundColor = UIColor.randomColor
         if let v = self.demoCtrl?.view {
             self.view.addSubview(v)
