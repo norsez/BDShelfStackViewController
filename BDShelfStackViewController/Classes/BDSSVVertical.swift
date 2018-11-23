@@ -6,6 +6,11 @@
 //
 
 import UIKit
+
+protocol ReloadableRow {
+    func reload(with row: BDSSVRow)
+}
+
 //MARK: Cell for vertical stack
 class VerticalStackCell: UITableViewCell {
     var _customView: UIView?
@@ -40,7 +45,7 @@ class VerticalStackCell: UITableViewCell {
 }
 
 //MARK: table for vertical stack
-class VerticalStackViewController: UITableViewController {
+class VerticalStackViewController: UITableViewController, ReloadableRow {
     fileprivate var _row: BDSSVRow?
     var row: BDSSVRow? {
         get {
@@ -102,6 +107,11 @@ class VerticalStackViewController: UITableViewController {
         }else {
             return 59
         }
+    }
+    
+    func reload(with row: BDSSVRow) {
+        self.row = row
+        self.tableView.reloadData()
     }
 }
 

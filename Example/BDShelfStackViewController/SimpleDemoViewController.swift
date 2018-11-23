@@ -25,8 +25,8 @@ class SimpleDemoViewController: UIViewController {
         let data = BDSSVData(withRows: rows)
         
         //programmatically create the shelf stack view controller
-        self.shelfStack = BDShelfStackViewController(withData: data)
-        
+        self.shelfStack = BDShelfStackViewController(nibName: nil, bundle: nil)
+        self.shelfStack?.createShelfStack(with: data)
         if let ctrl = self.shelfStack {
             //adds the shelf stack to the main view controller
             self.addChildViewController(ctrl)

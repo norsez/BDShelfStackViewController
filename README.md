@@ -18,6 +18,9 @@ Tables within tables – the easy way. Veritcally scrollables mixed with horizon
 
 `BDShelfStackViewController` is built based on `BDSSVData` defining each row - vertically or horizontally scrollable.  `BDSSVData` is based on `BDSSVRow`s which are delegates  for each row's displayed items.
 
+### What is Shelf Stack? 
+For the lack of a common term, we can a table of tables a shelf stack 🤷🏼‍♂️
+
 ```swift
 import BDShelfStackViewController //import the library
 …
@@ -36,8 +39,9 @@ class YourViewController: UIViewController {
         //create data from the rows
         let data = BDSSVData(withRows: rows)
         //create shelf stack from the data above
-        self.demoCtrl = BDShelfStackViewController(withData: data)
-
+        self.demoCtrl = BDShelfStackViewController(nibName:nil, bundle: nil)
+        //assign data to and populate the shelf stacks.
+        self.demoCtrl.createShelfStack(with: self.data)
         self.view.addSubview(self.demoCtrl)
         self.demoCtrol.view.frame = self.view.bounds
         //add the BDSSVShelfStackViewController as the main view's child viewcontroller
@@ -71,9 +75,22 @@ class YourViewController: UIViewController {
         //there are a few more block variables used to customize each item's behavior and appearance in BDSSVRow
         return r
     }
+    
+    func reloadSecondStack() {
+       //force reload a stack at index 1
+       self.demoCtrl.reloadRow(at: 1, flash: true)
+    }
+}
+    
     //That's it! Check out the sample project for a more detailed sample implementation
     
 ```
+## What's new in 0.0.4
+- remove `init(withData:)`. Now use `createShelfStack(with:)` to initialize the view of shelf stack
+- add method to reload the stack at the specified index - `reloadRow(at:,flash:)`
+- add `replaceRow(at:,with:)` for replacing a `BDSSVRow` in case you need to completely change both the behavior and the look of a stack row. Each call of this method will expensively recreate the entire shelf stack view.
+- add AutoupdatedMixedViewController in Example project to demostrate the use of `reloadRow(at:,flash:)`
+
 
 
 ## Example

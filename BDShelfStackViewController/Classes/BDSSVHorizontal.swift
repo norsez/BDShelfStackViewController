@@ -39,7 +39,7 @@ class HorizontalStackCell: UICollectionViewCell {
     }
 }
 //MARK: table for horizontal stack
-class HorizontalStackController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class HorizontalStackController: UICollectionViewController, UICollectionViewDelegateFlowLayout, ReloadableRow {
     let CELLID = "CELLID"
     fileprivate var _row: BDSSVRow?
     var row: BDSSVRow? {
@@ -97,5 +97,10 @@ class HorizontalStackController: UICollectionViewController, UICollectionViewDel
         }else {
             fatalError("either self.row.sizeAtIndex or self.row.itemSize can't be nil")
         }
+    }
+    
+    func reload(with row: BDSSVRow) {
+        self.row = row
+        self.collectionView?.reloadData()
     }
 }

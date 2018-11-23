@@ -64,7 +64,8 @@ class DemoEngine {
     
     var nextItem: (id: String, thumbnail: UIImage, name: String, artist: String, link: URL)? {
         get {
-            if let d = self.data?[idIndex],
+            let index = Int.random(in: 0..<self.data!.count)
+            if let d = self.data?[index],
                 let itemId = d["id"] as? String,
                 let image = self.imageCache[itemId],
                 let name = d["name"] as? String,
@@ -72,7 +73,7 @@ class DemoEngine {
                 let urlString = d["url"] as? String,
                 let url = URL(string: urlString){
                 
-                idIndex = idIndex.advanced(by: 1) % self.data!.count
+                //idIndex = idIndex.advanced(by: 1) % self.data!.count
                 
                 return (id:itemId,
                         thumbnail: image,
