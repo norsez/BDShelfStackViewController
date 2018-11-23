@@ -17,7 +17,7 @@ public enum BDSSVShelfType {
 }
 
 public struct BDSSVData {
-    let rows: [BDSSVRow]
+    public let rows: [BDSSVRow]
     public init(withRows r: [BDSSVRow]) {
         self.rows = r
     }

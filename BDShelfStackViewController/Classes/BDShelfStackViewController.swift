@@ -96,10 +96,59 @@ public class BDShelfStackViewController: UITableViewController {
     }
     
     //reload a row.
-    public func reloadRow(at index:Int) {
-        if let v = self.viewControllers[index] as? ReloadableRow,
-            let row = self.data?.rows[index] {
-            v.reload(with: row)
+    public func reloadRow(at index:Int, flash: Bool? = nil) {
+        
+        let doIt = {
+            if let v = self.viewControllers[index] as? ReloadableRow,
+                let row = self.data?.rows[index] {
+                v.reload(with: row)
+            }
+        }
+        
+        if flash == nil || flash == false {
+            doIt()
+        }else {
+            flashRow(at: index, afterBlock: doIt)
+        }
+    }
+    
+    //creates flash effect on the cell at the specified indexPath
+    func flashRow(at index: Int, afterBlock: @escaping ()->Void) {
+        let indexToFlash = IndexPath(row: index, section: 0)
+        if let visibles = self.tableView.indexPathsForVisibleRows,
+            visibles.contains(indexToFlash),
+            let cell = self.tableView.cellForRow(at: IndexPath(row: index, section: 0)) {
+            self.tableView.isUserInteractionEnabled = false
+            let v = UIView(frame: cell.contentView.bounds)
+            v.backgroundColor = UIColor.white
+            v.alpha = 0
+            cell.contentView.addSubview(v)
+            
+            //ramp up the flash
+            UIView.animate(withDuration: 0.5,
+                           animations: {
+                            v.alpha = 1
+            }, completion: { (done) in
+                if done {
+                    //switch to the new content
+                    afterBlock()
+                }
+                
+                //ramp down the flash
+                UIView.animate(withDuration: 1,
+                               
+                               animations: {
+                                v.alpha = 0
+                }, completion: { (done) in
+                    if done {
+                        v.removeFromSuperview()
+                    }
+                })
+                self.tableView.isUserInteractionEnabled = true
+
+            })
+            
+            
         }
     }
 }

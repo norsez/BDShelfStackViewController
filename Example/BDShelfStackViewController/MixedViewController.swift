@@ -14,6 +14,7 @@ import BDShelfStackViewController
  **/
 class MixedViewController: UIViewController {
     var demoCtrl: BDShelfStackViewController?
+    var data: BDSSVData?
     override func viewDidLoad() {
         super.viewDidLoad()
         //typical way to use BDShelfStackViewController
@@ -27,9 +28,10 @@ class MixedViewController: UIViewController {
             BDSSVRow.createDemoRow3(),
             BDSSVRow.createDemoRow4(),
             BDSSVRow.createBlankRow(withHeight: 168)]
-        let data = BDSSVData(withRows: rows)
+        
+        self.data = BDSSVData(withRows: rows)
         self.demoCtrl = BDShelfStackViewController(nibName: nil, bundle: nil)
-        self.demoCtrl?.createShelfStack(with: data)
+        self.demoCtrl?.createShelfStack(with: self.data!)
         self.demoCtrl?.view.backgroundColor = UIColor.randomColor
         if let v = self.demoCtrl?.view {
             self.view.addSubview(v)

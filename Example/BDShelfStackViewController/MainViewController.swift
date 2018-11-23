@@ -70,9 +70,9 @@ class MainViewController: UITableViewController {
             case .horizontal:
                 return "Using the same the pattern as above to create a horizontal version."
             case .mixed:
-                return "building mixed horizontal and vertical tables"
+                return "Building mixed horizontal and vertical tables"
             case .mixedUpdate:
-                return "Build on mixed tables. This is how you update stack rows."
+                return "Force reloading a stack/row"
             }
         }
         
