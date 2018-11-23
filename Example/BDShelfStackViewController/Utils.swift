@@ -39,3 +39,32 @@ extension UILabel {
         return label
     }
 }
+
+extension String {
+    func attrText(with height: CGFloat) -> NSAttributedString {
+        let par = NSMutableParagraphStyle()
+        par.lineSpacing = 0
+        par.lineBreakMode = .byTruncatingTail
+        
+        return NSAttributedString(string: self,
+                                  attributes: [
+                                    NSAttributedStringKey.font: UIFont.systemFont(ofSize: height),
+                                    NSAttributedStringKey.foregroundColor:
+                                        UIColor.randomColor,
+                                    NSAttributedStringKey.paragraphStyle:
+                                    par
+            ])
+    }
+}
+
+extension NSAttributedString {
+    static func randomStyle(withString text: String) -> NSAttributedString {
+        return NSAttributedString(string: text,
+                                  attributes: [
+                                    NSAttributedStringKey.font: UIFont.systemFont(ofSize: CGFloat.random(in: 9..<16)),
+                                    NSAttributedStringKey.foregroundColor:
+                                        UIColor.randomColor
+            ])
+    }
+}
+

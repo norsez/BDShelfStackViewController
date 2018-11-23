@@ -12,34 +12,6 @@ import UIKit
  * Don't look here! Quick and dirty demo util code
  **/
 
-extension String {
-    func attrText(with height: CGFloat) -> NSAttributedString {
-        let par = NSMutableParagraphStyle()
-        par.lineSpacing = 0
-        par.lineBreakMode = .byTruncatingTail
-        
-        return NSAttributedString(string: self,
-                                  attributes: [
-                                    NSAttributedStringKey.font: UIFont.systemFont(ofSize: height),
-                                    NSAttributedStringKey.foregroundColor:
-                                        UIColor.randomColor,
-                                    NSAttributedStringKey.paragraphStyle:
-                                     par
-            ])
-    }
-}
-
-extension NSAttributedString {
-    static func randomStyle(withString text: String) -> NSAttributedString {
-        return NSAttributedString(string: text,
-                                  attributes: [
-                                    NSAttributedStringKey.font: UIFont.systemFont(ofSize: CGFloat.random(in: 9..<16)),
-                                    NSAttributedStringKey.foregroundColor:
-                                    UIColor.randomColor
-            ])
-    }
-}
-
 
 class DemoEngine {
     private init() {}
@@ -52,7 +24,9 @@ class DemoEngine {
     var allNames: NSAttributedString {
         get {
             let names = NSMutableAttributedString(string:"")
-            self.data?.forEach({ (d) in
+            var data = self.data!
+            data = data.shuffled()
+            data.forEach({ (d) in
                 if let name = d["name"] as? String {
                     names.append(NSAttributedString.randomStyle(withString: name))
                     names.append(NSAttributedString(string: " "))
@@ -62,9 +36,17 @@ class DemoEngine {
         }
     }
     
+    func getItems(with count: Int) -> [(id: String, thumbnail: UIImage, name: String, artist: String, link: URL)] {
+        var results = [(id: String, thumbnail: UIImage, name: String, artist: String, link: URL)]()
+        for _ in 0..<count {
+            results.append(self.nextItem!)
+        }
+        return results
+    }
+    
     var nextItem: (id: String, thumbnail: UIImage, name: String, artist: String, link: URL)? {
         get {
-            let index = Int.random(in: 0..<self.data!.count)
+            let index = idIndex
             if let d = self.data?[index],
                 let itemId = d["id"] as? String,
                 let image = self.imageCache[itemId],
@@ -73,7 +55,7 @@ class DemoEngine {
                 let urlString = d["url"] as? String,
                 let url = URL(string: urlString){
                 
-                //idIndex = idIndex.advanced(by: 1) % self.data!.count
+                idIndex = idIndex.advanced(by: 1) % self.data!.count
                 
                 return (id:itemId,
                         thumbnail: image,
@@ -90,7 +72,7 @@ class DemoEngine {
     }
     
     func initialize(withProgress progress: (Float)->Void ) throws {
-        guard let url = URL(string:"https://rss.itunes.apple.com/api/v1/th/apple-music/hot-tracks/all/100/explicit.json") else {
+        guard let url = URL(string:"https://rss.itunes.apple.com/api/v1/th/apple-music/hot-tracks/all/200/explicit.json") else {
             fatalError("Apple Music is down. No demo.")
         }
         let data = try Data(contentsOf: url)

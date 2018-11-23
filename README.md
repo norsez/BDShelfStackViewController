@@ -19,7 +19,7 @@ Tables within tables – the easy way. Veritcally scrollables mixed with horizon
 `BDShelfStackViewController` is built based on `BDSSVData` defining each row - vertically or horizontally scrollable.  `BDSSVData` is based on `BDSSVRow`s which are delegates  for each row's displayed items.
 
 ### What is Shelf Stack? 
-For the lack of a common term, we can a table of tables a shelf stack 🤷🏼‍♂️
+For the lack of a common term, we call a table of tables a shelf stack 🤷🏼‍♂️
 
 ```swift
 import BDShelfStackViewController //import the library

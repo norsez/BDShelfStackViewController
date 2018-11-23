@@ -36,18 +36,20 @@ extension BDSSVRow {
     static func createDemoRow1(withWidth maxWidth: CGFloat) -> BDSSVRow {
         let ROW_HEIGHT: CGFloat = CGFloat.random(in: 280..<320)
         let SIZE_HEIGHT: CGFloat = 100
-        var r = BDSSVRow(withType: .vertical , itemCount: 37, rowHeight: ROW_HEIGHT)
+        let items = DemoEngine.shared.getItems(with: 37)
+        var r = BDSSVRow(withType: .vertical , itemCount: items.count, rowHeight: ROW_HEIGHT)
         r.sizeAtIndex = {
             index in return CGSize(width: maxWidth, height: SIZE_HEIGHT )
         }
         let bgColor = UIColor.randomColor
+        
         r.viewAtIndex = {
             index in
             let v = CellA(frame: CGRect(x: 0, y: 0, width: maxWidth, height: SIZE_HEIGHT))
-            let item = DemoEngine.shared.nextItem
-            v.titleLabel.text = item?.name ?? ""
-            v.subtitleLabel.text = item?.artist ?? ""
-            v.imageView.image = item?.thumbnail
+            let item = items[index]
+            v.titleLabel.attributedText = item.name.attrText(with: 18)
+            v.subtitleLabel.attributedText = item.artist.attrText(with: 12)
+            v.imageView.image = item.thumbnail
             v.backgroundColor = bgColor
             return v
         }
@@ -56,15 +58,16 @@ extension BDSSVRow {
     
     static func createDemoRow2() -> BDSSVRow {
         let HEIGHT = CGFloat.random(in: 158..<210)
-        var r = BDSSVRow(withType: .horizontal , itemCount: 35, rowHeight: HEIGHT)
+        let items = DemoEngine.shared.getItems(with: 41)
+        var r = BDSSVRow(withType: .horizontal , itemCount: items.count, rowHeight: HEIGHT)
         let DIM = HEIGHT * 0.74
         r.itemSize = CGSize(width: DIM, height: DIM)
         r.viewAtIndex = {
             index in
             let v = CellB(frame: CGRect(x: 0, y: 0, width: DIM * 1.4, height: DIM))
-            let item = DemoEngine.shared.nextItem
-            v.titleLabel.text = "\(item?.artist ?? "")\nNew Release"
-            v.imageView.image = item?.thumbnail
+            let item = items[index]
+            v.titleLabel.attributedText =  NSAttributedString.randomStyle(withString:  "\(item.artist)\nNew Release" )
+            v.imageView.image = item.thumbnail
             
             return v
         }
@@ -73,16 +76,17 @@ extension BDSSVRow {
     
     static func createDemoRow3() -> BDSSVRow {
         let HEIGHT = CGFloat.random(in: 42..<66)
-        var r = BDSSVRow(withType: .horizontal , itemCount: 53, rowHeight: HEIGHT)
+        let items = DemoEngine.shared.getItems(with: 53)
+        var r = BDSSVRow(withType: .horizontal , itemCount: items.count, rowHeight: HEIGHT)
         let WIDTH = CGFloat.random(in: 72..<120)
         r.itemSize = CGSize(width: WIDTH, height: HEIGHT * 0.9)
         r.viewAtIndex = {
             index in
             let v = CellB(frame: CGRect(x: 0, y: 0, width: WIDTH, height: HEIGHT * 0.9))
-            let item = DemoEngine.shared.nextItem
+            let item = items[index]
             v.imageView.contentMode = .scaleAspectFill
-            v.imageView.image = item?.thumbnail
-            v.titleLabel.text = item?.name ?? ""
+            v.imageView.image = item.thumbnail
+            v.titleLabel.attributedText = item.name.attrText(with: 12)
             return v
         }
         return r
@@ -90,7 +94,8 @@ extension BDSSVRow {
     
     static func createDemoRow4() -> BDSSVRow {
         let HEIGHT = CGFloat.random(in: 100..<180)
-        var r = BDSSVRow(withType: .horizontal , itemCount: 26, rowHeight: HEIGHT)
+        let items = DemoEngine.shared.getItems(with: 26)
+        var r = BDSSVRow(withType: .horizontal , itemCount: items.count, rowHeight: HEIGHT)
         let WIDTH = CGFloat.random(in: 90..<153)
         r.itemSize = CGSize(width: WIDTH, height: HEIGHT * 0.9)
         let bgColor = UIColor.randomColor
@@ -98,16 +103,17 @@ extension BDSSVRow {
             index in
             let v = CellA(frame: CGRect(x: 0, y: 0, width: WIDTH, height: HEIGHT * 0.9))
             v.backgroundColor = bgColor
-            let item = DemoEngine.shared.nextItem
-            v.imageView.image = item?.thumbnail
-            v.titleLabel.attributedText = "\(item?.name ?? "")".attrText(with: 12)
-            v.subtitleLabel.text = item?.artist ?? ""
+            let item = items [index]
+            v.imageView.image = item.thumbnail
+            v.titleLabel.attributedText = "\(item.name)".attrText(with: 12)
+            v.subtitleLabel.text = item.artist
             return v
         }
         return r
     }
     
     static func createBlankRow(withHeight h: CGFloat) -> BDSSVRow {
+        
         var r = BDSSVRow(withType: .vertical , itemCount: 1, rowHeight: h)
         r.itemSize = CGSize(width: 400, height: h)
         

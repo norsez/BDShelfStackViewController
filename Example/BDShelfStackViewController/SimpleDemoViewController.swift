@@ -57,8 +57,10 @@ class SimpleDemoViewController: UIViewController {
             WIDTH_ITEM = WIDTH_SIMPLE_SHELF * 0.8
         }
         
+        let items = DemoEngine.shared.getItems(with: 50)
+        
         //defines the first and only table in this demo
-        var rowsOfDemoTable = BDSSVRow(withType: type, itemCount: 50, rowHeight: HEIGHT_SIMPLE_SHELF)
+        var rowsOfDemoTable = BDSSVRow(withType: type, itemCount: items.count, rowHeight: HEIGHT_SIMPLE_SHELF)
         
         //required: sizeAtIndex
         //this defines the size of the cell
@@ -69,18 +71,18 @@ class SimpleDemoViewController: UIViewController {
         //required: viewAtIndex
         //this defines the view items to be displayed
         rowsOfDemoTable.viewAtIndex = { index in
-            let item = DemoEngine.shared.nextItem
+            let item = items[index]
             let view = CellA(frame: CGRect(x: 0, y: 0, width: WIDTH_ITEM, height: HEIGHT_ITEM))
-            view.imageView.image = item?.thumbnail
-            view.titleLabel.text = item?.name
-            view.subtitleLabel.text = item?.artist
+            view.imageView.image = item.thumbnail
+            view.titleLabel.text = item.name
+            view.subtitleLabel.text = item.artist
             return view
         }
         
         //optional: didTapItem
         rowsOfDemoTable.didTapItem = {
             index in
-            print("tap on item: \(index)")
+            print("tap on item: \( items[index])")
         }
         
         return rowsOfDemoTable
