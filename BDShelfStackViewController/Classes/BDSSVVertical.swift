@@ -109,6 +109,7 @@ class VerticalStackViewController: UITableViewController, ReloadableRow {
         }
     }
     
+    
     func reload(with row: BDSSVRow) {
         self.row = row
         self.tableView.reloadData()
@@ -117,9 +118,20 @@ class VerticalStackViewController: UITableViewController, ReloadableRow {
 
 
 //MARK: extension for cell
-extension UITableViewCell {
+class BDSSVRowCell: UITableViewCell {
     
+    let TAG_HEADER = 981
+    let TAG_CTRL = 992
+    var row: BDSSVRow?
+    var isSetup = false
     func setup(row: BDSSVRow) -> UIViewController? {
+        self.row = row
+        self.selectionStyle = .none
+        if let headerView = row.headerView, row.headerHeight > 0 {
+            headerView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+            headerView.tag = self.TAG_HEADER
+            self.contentView.addSubview(headerView)
+        }
         
         var ctrl: UIViewController
         switch row.type {
@@ -136,12 +148,27 @@ extension UITableViewCell {
             ctrl = v
             break
         }
-        ctrl.view.tag = 992
+        ctrl.view.tag = self.TAG_CTRL
         ctrl.view.autoresizingMask = []
-        ctrl.view.frame = self.contentView.bounds
-        self.contentView.addSubview(ctrl.view)
         
+        self.contentView.addSubview(ctrl.view)
+        self.isSetup = true
         return ctrl
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        var layoutFrame = CGRect.zero
+        
+        if let headerView = self.contentView.viewWithTag(self.TAG_HEADER),
+            let height = self.row?.headerHeight {
+            layoutFrame = CGRect(x: 0, y: 0, width: self.contentView.bounds.width, height: height)
+            headerView.frame = layoutFrame
+        }
+        
+        if let ctrl = self.contentView.viewWithTag(self.TAG_CTRL),
+            let height = self.row?.rowHeight {
+            ctrl.frame = CGRect(x: 0, y: layoutFrame.height, width: self.contentView.bounds.width, height: height)
+        }
+    }
 }
-

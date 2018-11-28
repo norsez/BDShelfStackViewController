@@ -29,13 +29,15 @@ public struct BDSSVData {
 public struct BDSSVRow {
     let type: BDSSVShelfType
     public var didTapItem: ((Int)->())?
-    
     let itemCount: Int
     public var viewAtIndex: ((Int)->UIView)?
     public var willDisplayCell: ((UITableViewCell, Int)->())?
     
     public var itemSize: CGSize?
     public var sizeAtIndex: ((Int)->CGSize)?
+    
+    public var headerView: UIView?
+    public var headerHeight: CGFloat = 0
     
     let rowHeight: CGFloat
     

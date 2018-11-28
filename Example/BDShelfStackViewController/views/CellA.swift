@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import QuartzCore
 class CellA: UIView {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var titleLabel: UILabel!
@@ -26,6 +26,8 @@ class CellA: UIView {
     func _initialize() {
         Bundle.main.loadNibNamed("CellA", owner: self, options: nil)
         self.addSubview(contentView)
+        self.imageView.layer.cornerRadius = 8
+        self.imageView.clipsToBounds = true
         self.contentView.frame = self.bounds
         self.contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }

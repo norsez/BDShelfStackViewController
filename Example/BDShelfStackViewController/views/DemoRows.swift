@@ -17,7 +17,7 @@ extension BDSSVRow {
     
     static func createHeader() -> BDSSVRow {
         //A row can be either horizontal or vertical
-        let HEIGHT_1: CGFloat = CGFloat.random(in: 80..<100)
+        let HEIGHT_1: CGFloat = 100
         var r = BDSSVRow(withType: .horizontal, itemCount: 1, rowHeight: HEIGHT_1)
         r.sizeAtIndex = {
             index in return CGSize(width: 1138, height: HEIGHT_1)
@@ -30,11 +30,15 @@ extension BDSSVRow {
             return v
         }
         
+        let hv = CellHeaderA(frame: CGRect.zero)
+        hv.label.attributedText = "Today's New Releases"._headerText
+        r.headerView = hv
+        r.headerHeight = 44
         return r
     }
     
     static func createDemoRow1(withWidth maxWidth: CGFloat) -> BDSSVRow {
-        let ROW_HEIGHT: CGFloat = CGFloat.random(in: 280..<320)
+        let ROW_HEIGHT: CGFloat = 300
         let SIZE_HEIGHT: CGFloat = 100
         let items = DemoEngine.shared.getItems(with: 37)
         var r = BDSSVRow(withType: .vertical , itemCount: items.count, rowHeight: ROW_HEIGHT)
@@ -53,11 +57,16 @@ extension BDSSVRow {
             v.backgroundColor = bgColor
             return v
         }
+        
+        let hv = CellHeaderA(frame: CGRect.zero)
+        hv.label.attributedText = "15% Discount"._headerText
+        r.headerView = hv
+        r.headerHeight = 32
         return r
     }
     
     static func createDemoRow2() -> BDSSVRow {
-        let HEIGHT = CGFloat.random(in: 158..<210)
+        let HEIGHT: CGFloat = 180
         let items = DemoEngine.shared.getItems(with: 41)
         var r = BDSSVRow(withType: .horizontal , itemCount: items.count, rowHeight: HEIGHT)
         let DIM = HEIGHT * 0.74
@@ -71,11 +80,16 @@ extension BDSSVRow {
             
             return v
         }
+        
+        let hv = CellHeaderA(frame: CGRect.zero)
+        hv.label.attributedText = "Hot Deals"._headerText
+        r.headerView = hv
+        r.headerHeight = 44
         return r
     }
     
     static func createDemoRow3() -> BDSSVRow {
-        let HEIGHT = CGFloat.random(in: 42..<66)
+        let HEIGHT: CGFloat = 64
         let items = DemoEngine.shared.getItems(with: 53)
         var r = BDSSVRow(withType: .horizontal , itemCount: items.count, rowHeight: HEIGHT)
         let WIDTH = CGFloat.random(in: 72..<120)
@@ -89,11 +103,17 @@ extension BDSSVRow {
             v.titleLabel.attributedText = item.name.attrText(with: 12)
             return v
         }
+        
+        let hv = CellHeaderA(frame: CGRect.zero)
+        hv.label.attributedText = "Bangkok Specials 🏬💕"._headerText
+        r.headerView = hv
+        r.headerHeight = 44
+        
         return r
     }
     
     static func createDemoRow4() -> BDSSVRow {
-        let HEIGHT = CGFloat.random(in: 100..<180)
+        let HEIGHT: CGFloat = 176
         let items = DemoEngine.shared.getItems(with: 26)
         var r = BDSSVRow(withType: .horizontal , itemCount: items.count, rowHeight: HEIGHT)
         let WIDTH = CGFloat.random(in: 90..<153)
@@ -109,6 +129,12 @@ extension BDSSVRow {
             v.subtitleLabel.text = item.artist
             return v
         }
+        
+        let hv = CellHeaderA(frame: CGRect.zero)
+        hv.label.attributedText = "📱🎼"._headerText
+        r.headerView = hv
+        r.headerHeight = 24
+        
         return r
     }
     
@@ -123,6 +149,22 @@ extension BDSSVRow {
             v.backgroundColor = UIColor.randomColor
             return v
         }
+        
         return r
+    }
+}
+
+//MARK -
+
+extension String {
+    var _headerText: NSAttributedString {
+        get {
+            let props: [NSAttributedStringKey: Any] = [
+                NSAttributedStringKey.font: UIFont.systemFont(ofSize: 20, weight: .bold),
+                NSAttributedStringKey.foregroundColor: UIColor.randomColor
+            ]
+            
+            return NSAttributedString(string: self, attributes: props)
+        }
     }
 }

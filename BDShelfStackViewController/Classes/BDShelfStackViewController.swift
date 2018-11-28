@@ -29,7 +29,8 @@ public class BDShelfStackViewController: UITableViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: self.CELL_ID)
+        self.tableView.register(BDSSVRowCell.self, forCellReuseIdentifier: self.CELL_ID)
+        self.tableView.allowsSelection = false
         self.styling?.stylingOnLoad(self)
         
     }
@@ -43,9 +44,10 @@ public class BDShelfStackViewController: UITableViewController {
     }
     
     override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: self.CELL_ID, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: self.CELL_ID, for: indexPath) as! BDSSVRowCell
         
-        if let row = self.data?.rows[indexPath.row] {
+        if let row = self.data?.rows[indexPath.row],
+            cell.isSetup == false {
             if let ctrl = cell.setup(row: row) {
                 self.viewControllers.append(ctrl)
             }
@@ -73,7 +75,7 @@ public class BDShelfStackViewController: UITableViewController {
     
     override public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if let h = self.data?.rows[indexPath.row].rowHeight {
-            return h
+            return h + (self.data?.rows[indexPath.row].headerHeight ?? 0)
         }
         return 54
     }
