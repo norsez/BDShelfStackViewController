@@ -63,6 +63,7 @@
 		F03D49CE591972831F8AD537 /* Pods-BDShelfStackViewController_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BDShelfStackViewController_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BDShelfStackViewController_Tests/Pods-BDShelfStackViewController_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F3002F1821AE5FD100925EFB /* CellHeaderA.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellHeaderA.xib; sourceTree = "<group>"; };
 		F3002F1921AE5FD100925EFB /* CellHeaderA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellHeaderA.swift; sourceTree = "<group>"; };
+		F391C0A121CB5E6300E0AF2B /* README.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = README.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F3ADFF5A2189637000CDAF62 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		F3E2A9D1219A814100A933D1 /* DemoEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoEngine.swift; sourceTree = "<group>"; };
 		F3E2A9D3219AB48B00A933D1 /* CellA.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellA.xib; sourceTree = "<group>"; };
@@ -112,6 +113,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				F391C0A121CB5E6300E0AF2B /* README.playground */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for BDShelfStackViewController */,
 				607FACE81AFB9204008FA782 /* Tests */,

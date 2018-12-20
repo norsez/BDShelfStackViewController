@@ -85,6 +85,12 @@ class YourViewController: UIViewController {
     //That's it! Check out the sample project for a more detailed sample implementation
     
 ```
+
+Try `README.playground` (Xcode 10 is required) for an interactive tutorial on how to use `BDShelfStackViewController` .
+
+## What's new in 0.0.5
+- add `README.playground` 
+
 ## What's new in 0.0.4
 - remove `init(withData:)`. Now use `createShelfStack(with:)` to initialize the view of shelf stack
 - add method to reload the stack at the specified index - `reloadRow(at:,flash:)`

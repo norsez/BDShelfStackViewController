@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BDShelfStackViewController'
-  s.version          = '0.0.4'
+  s.version          = '0.0.5'
   s.summary          = 'Create different multiple tables within one UIView, the easy way (?)'
 
 # This description is used to generate tags and improve search results.
