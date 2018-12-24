@@ -88,6 +88,10 @@ class YourViewController: UIViewController {
 
 Try `README.playground` (Xcode 10 is required) for an interactive tutorial on how to use `BDShelfStackViewController` .
 
+## What's new in 0.1.0
+- add method chaining to the classes
+- BDSSVRow is iniitalized values for app scaffolding
+
 ## What's new in 0.0.5
 - add `README.playground` 
 

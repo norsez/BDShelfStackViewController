@@ -59,19 +59,17 @@ extension BDSSVRow {
     public static func demoRow(withCount count: Int, rowHeight: CGFloat, itemSize: CGSize, type: BDSSVShelfType ) -> BDSSVRow {
         let ROW_HEIGHT: CGFloat = rowHeight
         let items = UIView.someViews(withCount: count, size: itemSize)
-        var r = BDSSVRow(withType: type , itemCount: items.count, rowHeight: ROW_HEIGHT)
-        r.sizeAtIndex = {
-            index in
-            
-            let item = items[index]
-            return CGSize(width: item.bounds.width, height: item.bounds.height )
-        }
-        
-        r.viewAtIndex = {
-            index in
-            let item = items[index]
-            return item
-        }
+        let r = BDSSVRow(withType: type , itemCount: items.count, rowHeight: ROW_HEIGHT)
+            .setSizeAtIndex({
+                index in
+                
+                let item = items[index]
+                return CGSize(width: item.bounds.width, height: item.bounds.height )
+            }).setViewAtIndex({
+                index in
+                let item = items[index]
+                return item
+            })
         return r
     }
 }
@@ -81,8 +79,8 @@ extension BDSSVRow: CustomPlaygroundDisplayConvertible {
     public var playgroundDescription: Any {
         get {
             var f = CGRect.zero
-            if let sz = self.itemSize {
-                f.size = sz
+            if let sz = self.sizeAtIndex {
+                f.size = sz(0)
             }
             let v = UIView(frame: f)
             if let c = self.viewAtIndex {

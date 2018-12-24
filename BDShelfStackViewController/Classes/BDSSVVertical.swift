@@ -100,9 +100,7 @@ class VerticalStackViewController: UITableViewController, ReloadableRow {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if let size = self._row?.itemSize {
-            return size.height
-        }else if let size = self._row?.sizeAtIndex {
+        if let size = self._row?.sizeAtIndex {
             return size(indexPath.row).height
         }else {
             return 59

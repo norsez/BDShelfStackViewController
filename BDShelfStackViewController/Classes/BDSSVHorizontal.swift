@@ -78,6 +78,7 @@ class HorizontalStackController: UICollectionViewController, UICollectionViewDel
         if let c = self.row?.viewAtIndex {
             let v = c(indexPath.row)
             cell.customView = v
+            v.frame = cell.contentView.bounds
         }
         return cell
     }
@@ -89,14 +90,8 @@ class HorizontalStackController: UICollectionViewController, UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return self.row!.sizeAtIndex!(indexPath.item)
         
-        if let s = self.row?.sizeAtIndex {
-            return s(indexPath.item)
-        }else if let s = self.row?.itemSize {
-            return CGSize(width: s.width, height: s.height)
-        }else {
-            fatalError("either self.row.sizeAtIndex or self.row.itemSize can't be nil")
-        }
     }
     
     func reload(with row: BDSSVRow) {
